@@ -1,0 +1,155 @@
+/* Tipografía (opcional: si tenés conexión) */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+
+:root{
+  --bg-0: #fffaf0;
+  --bg-1: #f6f2e9;
+  --text: #0f172a;
+  --muted: #6b7280;
+  --accent: #16a34a;
+  --card: #ffffff;
+  --shadow: 0 8px 24px rgba(15,23,42,0.06);
+  --glass: rgba(255,255,255,0.6);
+}
+
+*{box-sizing:border-box}
+html,body,#root{height:100%}
+body{
+  margin:0;
+  font-family: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  color:var(--text);
+  background: #fff;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+/* Layout helpers */
+.container{
+  max-width:1100px;
+  margin:0 auto;
+  padding:0 20px;
+}
+
+/* Construction badge centered nicely */
+.construction-wrap{
+  display:flex;
+  justify-content:center;
+  padding:18px 0;
+  pointer-events:none; /* no bloquee clicks */
+}
+.construction-badge{
+  pointer-events:auto;
+  background: linear-gradient(90deg, #fff7cc, #fff1d6);
+  color:#7a5800;
+  border:1px solid rgba(122,88,0,0.08);
+  padding:10px 16px;
+  border-radius:12px;
+  box-shadow: var(--shadow);
+  font-weight:600;
+  display:inline-flex;
+  gap:8px;
+  align-items:center;
+  justify-content:center;
+  font-size:0.95rem;
+}
+
+/* HERO */
+.home-hero{
+  background: linear-gradient(180deg, var(--bg-0) 0%, var(--bg-1) 100%);
+  padding:48px 0 36px;
+  text-align:center;
+}
+.hero-title{
+  margin:0 auto 12px;
+  font-size:clamp(1.5rem, 3.6vw, 2.6rem);
+  line-height:1.02;
+  font-weight:800;
+  letter-spacing:-0.01em;
+  max-width:900px;
+}
+.hero-sub{
+  margin:0 auto 20px;
+  color:var(--muted);
+  font-size:clamp(0.95rem, 1.8vw, 1.125rem);
+  max-width:720px;
+}
+
+/* Actions */
+.hero-actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:14px}
+.btn-primary{
+  background:var(--accent);
+  color:#fff;
+  padding:12px 18px;
+  border-radius:999px;
+  text-decoration:none;
+  font-weight:700;
+  box-shadow: 0 8px 20px rgba(16, 185, 129, 0.12);
+}
+.btn-primary:hover{filter:brightness(.96)}
+.link-secondary{
+  color:var(--text);
+  align-self:center;
+  text-decoration:underline;
+  font-size:0.95rem;
+}
+
+/* Main content */
+.main-content{padding:28px 0 40px;}
+
+/* Features grid and card style */
+.features-grid{
+  display:grid;
+  gap:20px;
+  grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+}
+.feature-card{
+  background:var(--card);
+  border-radius:14px;
+  padding:18px;
+  box-shadow: var(--shadow);
+  border:1px solid rgba(15,23,42,0.04);
+  text-align:center;
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+  align-items:center;
+}
+.feature-head{
+  width:64px;height:64px;border-radius:12px;
+  display:flex;align-items:center;justify-content:center;
+  background:linear-gradient(180deg,#ffffff,#f7fbf7);
+  font-size:1.6rem;
+  box-shadow: 0 6px 18px rgba(16,185,129,0.06);
+}
+.feature-title{
+  margin:0;
+  background:linear-gradient(180deg,#fff,#f9faf9);
+  padding:10px 14px;
+  border-radius:8px;
+  box-shadow: 0 8px 18px rgba(2,6,23,0.04);
+  font-weight:700;
+}
+.feature-desc{color:var(--muted);margin:0;font-size:0.95rem}
+
+/* How section */
+.how-section{margin-top:28px;background:#fbfbfb;border-radius:12px;padding:18px;border:1px solid rgba(2,6,23,0.03)}
+.how-title{margin:0 0 10px;font-weight:700}
+.how-list{margin:0;padding-left:18px;color:var(--muted)}
+
+/* Footer */
+.home-footer{
+  text-align:center;padding:20px 0;border-top:1px solid rgba(2,6,23,0.04);
+  color:var(--muted);font-size:0.95rem;
+}
+
+/* Responsive tweaks */
+@media (max-width:720px){
+  .hero-title{font-size:1.6rem}
+  .construction-badge{font-size:0.9rem;padding:8px 12px}
+  .feature-head{width:56px;height:56px}
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce){
+  *{transition:none!important;animation:none!important}
+}
