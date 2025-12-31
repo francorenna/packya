@@ -1,41 +1,78 @@
+// ...existing code...
+import React from 'react'
+import '../styles/home.css'
+
 export default function Home() {
   return (
-    <div className="w-full">
+    <div className="home-root">
+      <div className="construction-wrap" aria-hidden="false">
+        <div className="construction-badge">🚧 En construcción</div>
+      </div>
 
-      {/* HERO */}
-      <section className="bg-[#f6f2e9] py-20 text-center px-6">
-        <h1 className="text-4xl md:text-5xl font-bold mb-4">
-          Imprimimos tus cajas y bolsas en tiempo récord
-        </h1>
-        <p className="text-lg text-gray-700 mb-8">
-          Packaging profesional listo para usar – sin vueltas – sin demoras
-        </p>
+      <header className="home-hero">
+        <div className="container">
+          <h1 className="hero-title">Imprimimos tus cajas y bolsas en tiempo récord</h1>
+          <p className="hero-sub">
+            Packaging profesional listo para usar — sin vueltas, sin demoras.
+          </p>
 
-        <a
-          href="https://wa.me/5492610000000"
-          target="_blank"
-          className="inline-block bg-green-600 text-white px-8 py-4 rounded-full text-lg hover:bg-green-700 transition"
-        >
-          Pedir presupuesto por WhatsApp
-        </a>
-      </section>
-
-      {/* BENEFICIOS */}
-      <section className="grid md:grid-cols-3 gap-8 py-16 px-6 max-w-6xl mx-auto text-center">
-        <div>
-          <h3 className="text-xl font-semibold mb-2">⚡ Entrega rápida</h3>
-          <p>Producción express sin promesas falsas.</p>
+          <div className="hero-actions">
+            <a
+              className="btn-primary"
+              href="https://wa.me/5492610000000"
+              target="_blank"
+              rel="noreferrer"
+            >
+              📲 Pedir presupuesto por WhatsApp
+            </a>
+            <a className="link-secondary" href="#beneficios">
+              Conoce nuestros beneficios
+            </a>
+          </div>
         </div>
-        <div>
-          <h3 className="text-xl font-semibold mb-2">📦 Packaging profesional</h3>
-          <p>Cajas y bolsas listas para vender.</p>
-        </div>
-        <div>
-          <h3 className="text-xl font-semibold mb-2">🎨 Diseño incluido</h3>
-          <p>Adaptamos tu marca al packaging.</p>
-        </div>
-      </section>
+      </header>
 
+      <main className="container main-content">
+        <section id="beneficios" className="features-grid">
+          <article className="feature-card">
+            <div className="feature-head">⚡</div>
+            <h3 className="feature-title">Entrega rápida</h3>
+            <p className="feature-desc">
+              Producción express y logística optimizada para que recibas tu pedido a tiempo.
+            </p>
+          </article>
+
+          <article className="feature-card">
+            <div className="feature-head">📦</div>
+            <h3 className="feature-title">Packaging profesional</h3>
+            <p className="feature-desc">
+              Cajas y bolsas con acabados de calidad listos para la venta o envío.
+            </p>
+          </article>
+
+          <article className="feature-card">
+            <div className="feature-head">🎨</div>
+            <h3 className="feature-title">Diseño incluido</h3>
+            <p className="feature-desc">
+              Adaptamos tu marca al packaging con propuestas prácticas y escalables.
+            </p>
+          </article>
+        </section>
+
+        <section className="how-section">
+          <h4 className="how-title">¿Cómo trabajamos?</h4>
+          <ol className="how-list">
+            <li>Consultoría rápida para medir tus necesidades.</li>
+            <li>Propuesta de diseño y presupuesto en 24-48 horas.</li>
+            <li>Producción y entrega con seguimiento.</li>
+          </ol>
+        </section>
+      </main>
+
+      <footer className="home-footer">
+        © {new Date().getFullYear()} Packya — Página en progreso.
+      </footer>
     </div>
   )
 }
+// ...existing code...
