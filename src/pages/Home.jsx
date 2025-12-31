@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import '../styles/home.css'
 
 import cajas1 from '../assets/cajas1.jpeg'
+import cajas0 from '../assets/cajas0.png'
 import cajas2 from '../assets/cajas2.jpeg'
 import cajas3 from '../assets/cajas3.jpeg'
 import cajas4 from '../assets/cajas4.jpeg'
@@ -13,7 +14,7 @@ import cajas7 from '../assets/cajas7.jpeg'
 export default function Home() {
   const [expanded, setExpanded] = useState(false)
   const [mainIndex, setMainIndex] = useState(0)
-  const gallery = [cajas1, cajas2, cajas3, cajas4, cajas5, cajas6, cajas7]
+  const gallery = [cajas0, cajas1, cajas2, cajas3, cajas4, cajas5, cajas6, cajas7]
 
   return (
     <div className="home-root">
@@ -60,7 +61,11 @@ export default function Home() {
               tabIndex={0}
               onKeyDown={(e) => e.key === 'Enter' && setExpanded((s) => !s)}
             >
-              <img src={gallery[mainIndex]} alt={`Cajas ${mainIndex + 1}`} className="showcase-main-img" />
+              <img
+                src={gallery[mainIndex]}
+                alt={`Cajas ${mainIndex + 1}`}
+                className={`showcase-main-img ${mainIndex === 0 ? 'is-priority' : ''}`}
+              />
             </div>
 
             <div className="showcase-thumbs" aria-hidden={!expanded}>
