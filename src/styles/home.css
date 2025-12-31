@@ -134,14 +134,32 @@ body{
 /* Product showcase under banner */
 .product-showcase{padding:28px 0 10px}
 .showcase-title{
-  font-size:clamp(1.8rem, 4.6vw, 2.6rem);
+  font-size:clamp(1.8rem, 5.2vw, 3.2rem);
   text-align:center;
   font-weight:900;
-  margin:6px 0 6px;
+  margin:6px 0 14px;
   letter-spacing:-0.02em;
   animation: pop-in 900ms cubic-bezier(.2,.9,.3,1) both;
+  position:relative;
+  display:inline-block;
+  padding:8px 20px;
+  color:#081229;
+  z-index:2;
 }
-.showcase-sub{color:var(--muted);text-align:center;margin:0 0 18px}
+.showcase-hero::before{
+  content:'';
+  position:absolute;
+  left:-6px;
+  right:-6px;
+  top:50%;
+  transform:translateY(-50%) rotate(-2deg);
+  height:60%;
+  background: linear-gradient(90deg,#16a34a,#06b6d4);
+  z-index:-1;
+  border-radius:8px;
+  opacity:0.95;
+}
+.showcase-sub{display:block;color:var(--muted);text-align:center;margin:0 0 18px}
 
 .showcase-gallery{display:flex;flex-direction:column;align-items:center;gap:18px}
 .showcase-main{cursor:pointer;display:flex;justify-content:center;align-items:center;width:100%;max-width:900px;position:relative;height:clamp(320px,40vw,520px);overflow:hidden;border-radius:12px}

@@ -45,8 +45,8 @@ export default function Home() {
       {/* New showcase section under banner */}
       <section className="product-showcase">
         <div className="container">
-          <h2 className="showcase-title">Impresión de Cajas y Bolsas</h2>
-          <h3 className="showcase-sub">Cajas de Pizza</h3>
+          {/* Removed repetitive heading; make Cajas de Pizza the main showcase title */}
+          <h2 className="showcase-title showcase-hero">Cajas de Pizza</h2>
 
           <div
             className={`showcase-gallery ${expanded ? 'is-expanded' : ''}`}
