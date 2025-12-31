@@ -12,6 +12,10 @@
   --glass: rgba(255,255,255,0.6);
 }
 
+/* space to avoid content being hidden under the fixed banner */
+/* removed top padding so banner (sticky) remains in normal flow and pushes content */
+.home-root{}
+
 *{box-sizing:border-box}
 html,body,#root{height:100%}
 body{

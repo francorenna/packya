@@ -1,0 +1,48 @@
+:root{
+  --banner-height: 200px; /* reserva variable por compatibilidad, la imagen decidirá la altura real */
+}
+
+.site-banner{
+  position:sticky; /* en flujo: empuja contenido hacia abajo y se queda arriba al scrollear */
+  top:0;
+  left:0;
+  width:100vw; /* asegurar full viewport width */
+  height:auto; /* dejar que la imagen marque la altura */
+  z-index:9999;
+  overflow:hidden;
+  display:block;
+}
+
+.site-banner__img{
+  position:relative;
+  display:block;
+  width:100vw; /* llenar ancho del viewport */
+  height:auto; /* conservar proporción */
+  max-width:none !important;
+  object-fit:cover; /* cubrir el contenedor si hace falta */
+  object-position:center top;
+  pointer-events:none;
+  user-select:none;
+}
+
+.site-banner__overlay{
+  position:absolute;
+  inset:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background: linear-gradient(180deg, rgba(0,0,0,0.22), rgba(0,0,0,0.0));
+}
+
+.banner-brand{
+  color:#ffffff;
+  font-weight:800;
+  margin:0;
+  letter-spacing:-0.02em;
+  font-size:clamp(1rem, 2.6vw, 1.4rem);
+  text-shadow: 0 8px 24px rgba(0,0,0,0.35);
+}
+
+@media (max-width:720px){
+  :root{ --banner-height: 140px; }
+}
