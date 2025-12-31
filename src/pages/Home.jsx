@@ -196,6 +196,39 @@ export default function Home() {
       <footer className="home-footer">
         © {new Date().getFullYear()} Packya — Página en progreso.
       </footer>
+
+      {/* Social links */}
+      <section className="socials" aria-label="Redes sociales">
+        <div className="container socials-inner">
+          <a
+            className="social-btn instagram"
+            href="https://www.instagram.com/packyacajasybolsas"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Instagram"
+          >
+            <svg className="social-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+              <rect x="3" y="3" width="18" height="18" rx="5" stroke="white" strokeWidth="1.2" fill="none" />
+              <circle cx="12" cy="12" r="3" stroke="white" strokeWidth="1.2" fill="none" />
+              <circle cx="17" cy="7" r="0.8" fill="white" />
+            </svg>
+            <span className="social-label">Instagram</span>
+          </a>
+
+          <a
+            className="social-btn tiktok"
+            href="https://www.tiktok.com/@packyacajasybolsas"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="TikTok"
+          >
+            <svg className="social-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+              <path d="M9 7v6a3 3 0 1 0 3 3V9h3V7h-6z" fill="white" />
+            </svg>
+            <span className="social-label">TikTok</span>
+          </a>
+        </div>
+      </section>
     </div>
   )
 }

@@ -310,3 +310,25 @@ body{
 @media (prefers-reduced-motion: reduce){
   *{transition:none!important;animation:none!important}
 }
+
+/* Social buttons */
+.socials{padding:26px 0 40px}
+.socials-inner{display:flex;gap:18px;justify-content:center;align-items:center;flex-wrap:wrap}
+.social-btn{display:inline-flex;align-items:center;gap:10px;padding:12px 18px;border-radius:12px;color:#fff;text-decoration:none;font-weight:700;box-shadow:0 8px 20px rgba(2,6,23,0.06);transform:translateZ(0);transition:transform .22s cubic-bezier(.2,.9,.3,1),box-shadow .22s ease}
+.social-btn .social-icon{width:22px;height:22px;flex:0 0 22px}
+.social-btn .social-label{display:inline-block}
+.social-btn:hover{transform:translateY(-6px) scale(1.03);box-shadow:0 24px 40px rgba(2,6,23,0.12)}
+
+/* Instagram gradient button approximation */
+.social-btn.instagram{background:linear-gradient(45deg,#f58529,#dd2a7b,#8134af)}
+.social-btn.instagram .social-icon{filter:drop-shadow(0 6px 12px rgba(0,0,0,0.18))}
+
+/* TikTok dark button with small accent */
+.social-btn.tiktok{background:#010101}
+.social-btn.tiktok .social-icon{width:22px;height:22px}
+.social-btn.tiktok::after{content:'';width:8px;height:8px;border-radius:50%;background:linear-gradient(180deg,#25f4ee,#ff004f);margin-left:6px}
+
+@media (max-width:600px){
+  .socials-inner{gap:12px}
+  .social-btn{padding:10px 12px}
+}
