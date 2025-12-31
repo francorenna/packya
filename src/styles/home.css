@@ -250,6 +250,36 @@ body{
   color:var(--muted);font-size:0.95rem;
 }
 
+/* Dark highlight banner */
+.highlight-banner{
+  background: linear-gradient(90deg,#071226,#0b1524);
+  color: #fff;
+  padding:28px 0;
+}
+.highlight-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:18px;align-items:center;justify-items:center}
+.highlight-item{padding:8px 12px;max-width:420px;width:100%;}
+.highlight-item h3{margin:0;color:#fff;font-weight:800;font-size:clamp(1rem,2.2vw,1.25rem);letter-spacing:-0.01em;text-align:center;line-height:1.05;}
+.highlight-item{opacity:0;transform:translateY(8px) scale(.995);animation: highlight-pop .6s cubic-bezier(.2,.9,.3,1) both}
+.highlight-item:nth-child(1){animation-delay:0.06s}
+.highlight-item:nth-child(2){animation-delay:0.16s}
+.highlight-item:nth-child(3){animation-delay:0.26s}
+.highlight-item:nth-child(4){animation-delay:0.36s}
+
+@keyframes highlight-pop{from{opacity:0;transform:translateY(10px) scale(.995)}to{opacity:1;transform:none}}
+
+/* subtle glowing effect on text to draw attention */
+.highlight-item h3{animation: highlight-glow 3.2s ease-in-out infinite}
+@keyframes highlight-glow{0%{text-shadow:0 0 0 rgba(255,255,255,0)}50%{text-shadow:0 10px 30px rgba(255,255,255,0.06)}100%{text-shadow:0 0 0 rgba(255,255,255,0)}}
+
+@media (max-width:720px){
+  .highlight-grid{grid-template-columns:repeat(2,1fr);gap:12px}
+  .highlight-item h3{font-size:1rem}
+}
+
+@media (prefers-reduced-motion: reduce){
+  .highlight-item,.highlight-item h3{animation:none!important}
+}
+
 /* Responsive tweaks */
 @media (max-width:720px){
   .hero-title{font-size:1.6rem}

@@ -138,6 +138,24 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Dark highlight banner with 4 mentions */}
+      <section className="highlight-banner" aria-label="Destacados">
+        <div className="container highlight-grid">
+          <div className="highlight-item">
+            <h3>+ de 5.000 cajas impresas</h3>
+          </div>
+          <div className="highlight-item">
+            <h3>Clientes de Mendoza y el país</h3>
+          </div>
+          <div className="highlight-item">
+            <h3>Impresión propia</h3>
+          </div>
+          <div className="highlight-item">
+            <h3>Entrega express real</h3>
+          </div>
+        </div>
+      </section>
+
       <main className="container main-content">
         <section id="beneficios" className="features-grid">
           <article className="feature-card">
