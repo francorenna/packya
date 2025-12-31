@@ -19,7 +19,7 @@ export default function Home() {
           <div className="hero-actions">
             <a
               className="btn-primary"
-              href="https://wa.me/5492610000000"
+              href="https://wa.me/5492615108060"
               target="_blank"
               rel="noreferrer"
             >
