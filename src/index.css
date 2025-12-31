@@ -89,8 +89,8 @@
 /* small screen tweaks */
 @media (max-width: 420px) {
   .splash { padding-left: 12px; padding-right: 12px; }
-  .splash-ring { width: clamp(96px, 44vw, 200px); height: clamp(96px, 44vw, 200px); }
-  .splash-logo { width: clamp(88px, 40vw, 180px); }
+  .splash-ring { width: clamp(120px, 44vw, 260px); height: clamp(120px, 44vw, 260px); }
+  .splash-logo { width: clamp(120px, 50vw, 260px); }
 }
 
 /* fallback for very old browsers without gradients */
