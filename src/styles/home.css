@@ -178,6 +178,19 @@ body{
   border-radius:8px;
   opacity:0.95;
 }
+.showcase-wine::before{
+  content:'';
+  position:absolute;
+  left:-6px;
+  right:-6px;
+  top:50%;
+  transform:translateY(-50%) rotate(-2deg);
+  height:60%;
+  background: linear-gradient(90deg,#9333ea,#ec4899);
+  z-index:-1;
+  border-radius:8px;
+  opacity:0.95;
+}
 .showcase-sub{display:block;color:var(--muted);text-align:center;margin:0 0 18px}
 
 .showcase-gallery{display:flex;flex-direction:column;align-items:center;gap:18px}

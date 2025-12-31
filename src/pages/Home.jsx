@@ -17,6 +17,10 @@ import bolsas2 from '../assets/bolsas2.jpeg'
 import bolsas3 from '../assets/bolsas3.jpeg'
 import bolsas4 from '../assets/bolsas4.jpeg'
 import bolsas5 from '../assets/bolsas5.jpeg'
+
+import vino0 from '../assets/vino0.png'
+import vino1 from '../assets/vino1.jpeg'
+
 export default function Home() {
   const [expanded, setExpanded] = useState(false)
   const [mainIndex, setMainIndex] = useState(0)
@@ -25,6 +29,10 @@ export default function Home() {
   const [expandedB, setExpandedB] = useState(false)
   const [mainIndexB, setMainIndexB] = useState(0)
   const bags = [bolsas0, bolsas1, bolsas2, bolsas3, bolsas4, bolsas5]
+
+  const [expandedV, setExpandedV] = useState(false)
+  const [mainIndexV, setMainIndexV] = useState(0)
+  const wines = [vino0, vino1]
 
   return (
     <div className="home-root">
@@ -130,6 +138,48 @@ export default function Home() {
                   onClick={() => {
                     setMainIndexB(i + 1)
                     setExpandedB(true)
+                  }}
+                />
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Cajas de Vino showcase */}
+      <section className="product-showcase">
+        <div className="container">
+          <h2 className="showcase-title showcase-wine">Cajas de Vino</h2>
+
+          <div
+            className={`showcase-gallery ${expandedV ? 'is-expanded' : ''}`}
+            onMouseEnter={() => setExpandedV(true)}
+            onMouseLeave={() => setExpandedV(false)}
+          >
+            <div
+              className="showcase-main"
+              onClick={() => setExpandedV((s) => !s)}
+              role="button"
+              tabIndex={0}
+              onKeyDown={(e) => e.key === 'Enter' && setExpandedV((s) => !s)}
+            >
+              <img
+                src={wines[mainIndexV]}
+                alt={`Cajas de Vino ${mainIndexV + 1}`}
+                className={`showcase-main-img ${mainIndexV === 0 ? 'is-priority' : ''}`}
+              />
+            </div>
+
+            <div className="showcase-thumbs" aria-hidden={!expandedV}>
+              {wines.slice(1).map((src, i) => (
+                <img
+                  key={i}
+                  src={src}
+                  alt={`Cajas de Vino ${i + 2}`}
+                  className="thumb"
+                  onClick={() => {
+                    setMainIndexV(i + 1)
+                    setExpandedV(true)
                   }}
                 />
               ))}
