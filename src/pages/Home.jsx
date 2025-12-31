@@ -11,10 +11,20 @@ import cajas5 from '../assets/cajas5.jpeg'
 import cajas6 from '../assets/cajas6.jpeg'
 import cajas7 from '../assets/cajas7.jpeg'
 
+import bolsas0 from '../assets/bolsas0.png'
+import bolsas1 from '../assets/bolsas1.jpeg'
+import bolsas2 from '../assets/bolsas2.jpeg'
+import bolsas3 from '../assets/bolsas3.jpeg'
+import bolsas4 from '../assets/bolsas4.jpeg'
+import bolsas5 from '../assets/bolsas5.jpeg'
 export default function Home() {
   const [expanded, setExpanded] = useState(false)
   const [mainIndex, setMainIndex] = useState(0)
   const gallery = [cajas0, cajas1, cajas2, cajas3, cajas4, cajas5, cajas6, cajas7]
+
+  const [expandedB, setExpandedB] = useState(false)
+  const [mainIndexB, setMainIndexB] = useState(0)
+  const bags = [bolsas0, bolsas1, bolsas2, bolsas3, bolsas4, bolsas5]
 
   return (
     <div className="home-root">
@@ -78,6 +88,48 @@ export default function Home() {
                   onClick={() => {
                     setMainIndex(i + 1)
                     setExpanded(true)
+                  }}
+                />
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Bolsas showcase, same layout/behavior as Cajas */}
+      <section className="product-showcase">
+        <div className="container">
+          <h2 className="showcase-title showcase-hero">Bolsas</h2>
+
+          <div
+            className={`showcase-gallery ${expandedB ? 'is-expanded' : ''}`}
+            onMouseEnter={() => setExpandedB(true)}
+            onMouseLeave={() => setExpandedB(false)}
+          >
+            <div
+              className="showcase-main"
+              onClick={() => setExpandedB((s) => !s)}
+              role="button"
+              tabIndex={0}
+              onKeyDown={(e) => e.key === 'Enter' && setExpandedB((s) => !s)}
+            >
+              <img
+                src={bags[mainIndexB]}
+                alt={`Bolsas ${mainIndexB + 1}`}
+                className={`showcase-main-img ${mainIndexB === 0 ? 'is-priority' : ''}`}
+              />
+            </div>
+
+            <div className="showcase-thumbs" aria-hidden={!expandedB}>
+              {bags.slice(1).map((src, i) => (
+                <img
+                  key={i}
+                  src={src}
+                  alt={`Bolsas ${i + 2}`}
+                  className="thumb"
+                  onClick={() => {
+                    setMainIndexB(i + 1)
+                    setExpandedB(true)
                   }}
                 />
               ))}
