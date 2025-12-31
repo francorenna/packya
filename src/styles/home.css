@@ -100,6 +100,34 @@ body{
 /* Main content */
 .main-content{padding:28px 0 40px;}
 
+/* Product showcase under banner */
+.product-showcase{padding:28px 0 10px}
+.showcase-title{
+  font-size:clamp(1.8rem, 4.6vw, 2.6rem);
+  text-align:center;
+  font-weight:900;
+  margin:6px 0 6px;
+  letter-spacing:-0.02em;
+  animation: pop-in 900ms cubic-bezier(.2,.9,.3,1) both;
+}
+.showcase-sub{color:var(--muted);text-align:center;margin:0 0 18px}
+
+.showcase-gallery{display:flex;flex-direction:column;align-items:center;gap:18px}
+.showcase-main{cursor:pointer;display:flex;justify-content:center;align-items:center;width:100%;max-width:900px}
+.showcase-main-img{width:100%;height:auto;border-radius:12px;box-shadow:var(--shadow);transition:transform .28s ease, box-shadow .28s ease}
+.showcase-main:hover .showcase-main-img{transform:scale(1.02);box-shadow:0 18px 40px rgba(2,6,23,0.08)}
+
+.showcase-thumbs{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;max-width:980px;opacity:0;transform:translateY(-6px);transition:opacity .28s ease, transform .28s ease}
+.showcase-gallery.is-expanded .showcase-thumbs{opacity:1;transform:none}
+.thumb{width:120px;height:80px;object-fit:cover;border-radius:8px;border:1px solid rgba(2,6,23,0.06);box-shadow:var(--shadow);cursor:pointer;transition:transform .18s ease}
+.thumb:hover{transform:translateY(-6px) scale(1.03)}
+
+@keyframes pop-in{
+  0%{opacity:0;transform:translateY(8px) scale(.98)}
+  100%{opacity:1;transform:none}
+}
+
+
 /* Features grid and card style */
 .features-grid{
   display:grid;

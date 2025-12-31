@@ -1,13 +1,22 @@
 // ...existing code...
-import React from 'react'
+import React, { useState } from 'react'
 import '../styles/home.css'
 
+import cajas1 from '../assets/cajas1.jpeg'
+import cajas2 from '../assets/cajas2.jpeg'
+import cajas3 from '../assets/cajas3.jpeg'
+import cajas4 from '../assets/cajas4.jpeg'
+import cajas5 from '../assets/cajas5.jpeg'
+import cajas6 from '../assets/cajas6.jpeg'
+import cajas7 from '../assets/cajas7.jpeg'
+
 export default function Home() {
+  const [expanded, setExpanded] = useState(false)
+  const gallery = [cajas1, cajas2, cajas3, cajas4, cajas5, cajas6, cajas7]
+
   return (
     <div className="home-root">
-      <div className="construction-wrap" aria-hidden="false">
-        <div className="construction-badge">🚧 En construcción</div>
-      </div>
+      {/* Removed construction badge as requested */}
 
       <header className="home-hero">
         <div className="container">
@@ -31,6 +40,36 @@ export default function Home() {
           </div>
         </div>
       </header>
+
+      {/* New showcase section under banner */}
+      <section className="product-showcase">
+        <div className="container">
+          <h2 className="showcase-title">Impresión de Cajas y Bolsas</h2>
+          <h3 className="showcase-sub">Cajas de Pizza</h3>
+
+          <div
+            className={`showcase-gallery ${expanded ? 'is-expanded' : ''}`}
+            onMouseEnter={() => setExpanded(true)}
+            onMouseLeave={() => setExpanded(false)}
+          >
+            <div
+              className="showcase-main"
+              onClick={() => setExpanded((s) => !s)}
+              role="button"
+              tabIndex={0}
+              onKeyDown={(e) => e.key === 'Enter' && setExpanded((s) => !s)}
+            >
+              <img src={cajas1} alt="Cajas 1" className="showcase-main-img" />
+            </div>
+
+            <div className="showcase-thumbs" aria-hidden={!expanded}>
+              {gallery.slice(1).map((src, i) => (
+                <img key={i} src={src} alt={`Cajas ${i + 2}`} className="thumb" />
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
 
       <main className="container main-content">
         <section id="beneficios" className="features-grid">
