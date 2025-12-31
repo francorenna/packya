@@ -1,5 +1,6 @@
-/* Tipografía (opcional: si tenés conexión) */
+/* Tipografías */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
 
 :root{
   --bg-0: #fffaf0;
@@ -65,11 +66,41 @@ body{
 }
 .hero-title{
   margin:0 auto 12px;
-  font-size:clamp(1.5rem, 3.6vw, 2.6rem);
+  font-size:clamp(2rem, 5.5vw, 3.6rem);
   line-height:1.02;
-  font-weight:800;
+  font-family: 'Abril Fatface', 'Inter', serif;
+  font-weight:400;
   letter-spacing:-0.01em;
   max-width:900px;
+  position:relative;
+  display:inline-block;
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+  /* highlight effect */
+  text-shadow: 0 6px 18px rgba(16,185,129,0.08), 0 2px 6px rgba(2,6,23,0.06);
+  overflow:hidden;
+}
+
+/* animated shine */
+.hero-title::after{
+  content:'';
+  position:absolute;
+  left:-60%;
+  top:0;
+  height:100%;
+  width:60%;
+  background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.6) 50%, rgba(255,255,255,0) 100%);
+  transform:skewX(-18deg);
+  opacity:0.85;
+  animation: hero-shine 2.4s ease-in-out infinite;
+}
+
+@keyframes hero-shine{
+  0%{left:-60%;opacity:0}
+  10%{opacity:0.5}
+  50%{left:120%;opacity:0.9}
+  90%{opacity:0.5}
+  100%{left:120%;opacity:0}
 }
 .hero-sub{
   margin:0 auto 20px;
