@@ -12,6 +12,7 @@ import cajas7 from '../assets/cajas7.jpeg'
 
 export default function Home() {
   const [expanded, setExpanded] = useState(false)
+  const [mainIndex, setMainIndex] = useState(0)
   const gallery = [cajas1, cajas2, cajas3, cajas4, cajas5, cajas6, cajas7]
 
   return (
@@ -59,12 +60,21 @@ export default function Home() {
               tabIndex={0}
               onKeyDown={(e) => e.key === 'Enter' && setExpanded((s) => !s)}
             >
-              <img src={cajas1} alt="Cajas 1" className="showcase-main-img" />
+              <img src={gallery[mainIndex]} alt={`Cajas ${mainIndex + 1}`} className="showcase-main-img" />
             </div>
 
             <div className="showcase-thumbs" aria-hidden={!expanded}>
               {gallery.slice(1).map((src, i) => (
-                <img key={i} src={src} alt={`Cajas ${i + 2}`} className="thumb" />
+                <img
+                  key={i}
+                  src={src}
+                  alt={`Cajas ${i + 2}`}
+                  className="thumb"
+                  onClick={() => {
+                    setMainIndex(i + 1)
+                    setExpanded(true)
+                  }}
+                />
               ))}
             </div>
           </div>

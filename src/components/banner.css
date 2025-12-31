@@ -3,12 +3,10 @@
 }
 
 .site-banner{
-  position:sticky; /* en flujo: empuja contenido hacia abajo y se queda arriba al scrollear */
-  top:0;
-  left:0;
-  width:100vw; /* asegurar full viewport width */
+  position:relative; /* en flujo normal: ocupa espacio y empuja el contenido */
+  width:100%;
   height:auto; /* dejar que la imagen marque la altura */
-  z-index:9999;
+  z-index:1; /* mantener bajo para no superponer contenido */
   overflow:hidden;
   display:block;
 }
@@ -16,9 +14,9 @@
 .site-banner__img{
   position:relative;
   display:block;
-  width:100vw; /* llenar ancho del viewport */
+  width:100%; /* llenar el contenedor sin usar 100vw (evita overflow) */
   height:auto; /* conservar proporción */
-  max-width:none !important;
+  max-width:none;
   object-fit:cover; /* cubrir el contenedor si hace falta */
   object-position:center top;
   pointer-events:none;
