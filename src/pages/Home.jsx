@@ -21,6 +21,9 @@ import bolsas5 from '../assets/bolsas5.jpeg'
 import vino0 from '../assets/vino0.png'
 import vino1 from '../assets/vino1.jpeg'
 
+import pcb from '../assets/pcb.png'
+import pcm from '../assets/pcm.png'
+
 export default function Home() {
   const [expanded, setExpanded] = useState(false)
   const [mainIndex, setMainIndex] = useState(0)
@@ -60,6 +63,30 @@ export default function Home() {
           </div>
         </div>
       </header>
+
+      {/* Banners clickeables para contacto por WhatsApp */}
+      <section className="contact-banners">
+        <div className="container">
+          <div className="banners-grid">
+            <a
+              href="https://wa.me/5492615108060"
+              target="_blank"
+              rel="noreferrer"
+              className="banner-link"
+            >
+              <img src={pcb} alt="Banner PCB - Contactar por WhatsApp" className="banner-image" />
+            </a>
+            <a
+              href="https://wa.me/5492615108060"
+              target="_blank"
+              rel="noreferrer"
+              className="banner-link"
+            >
+              <img src={pcm} alt="Banner PCM - Contactar por WhatsApp" className="banner-image" />
+            </a>
+          </div>
+        </div>
+      </section>
 
       {/* New showcase section under banner */}
       <section className="product-showcase">
