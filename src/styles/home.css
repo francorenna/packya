@@ -419,3 +419,353 @@ body{
   .socials-inner{gap:12px}
   .social-btn{padding:10px 12px}
 }
+
+/* NEW SECTIONS - SEO Optimized */
+
+/* Section titles */
+.section-title {
+  font-size: clamp(2rem, 4.5vw, 2.8rem);
+  font-weight: 800;
+  text-align: center;
+  margin: 0 auto 16px;
+  letter-spacing: -0.02em;
+  color: var(--text);
+  max-width: 800px;
+}
+
+.section-intro {
+  text-align: center;
+  color: var(--muted);
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto 40px;
+  line-height: 1.6;
+}
+
+.section-title-small {
+  font-size: clamp(1.5rem, 3.5vw, 2rem);
+  font-weight: 700;
+  text-align: center;
+  margin: 0 auto 24px;
+  color: var(--text);
+}
+
+/* Showcase descriptions */
+.showcase-desc {
+  text-align: center;
+  color: var(--muted);
+  font-size: 1rem;
+  max-width: 600px;
+  margin: -8px auto 24px;
+  line-height: 1.5;
+}
+
+/* Why PACKYA section */
+.why-packya {
+  padding: 60px 0;
+  background: var(--bg-1);
+}
+
+.why-packya .features-grid {
+  margin-bottom: 40px;
+}
+
+/* CTA buttons */
+.cta-center {
+  text-align: center;
+  margin-top: 32px;
+}
+
+.btn-primary-large {
+  display: inline-block;
+  background: var(--accent);
+  color: #fff;
+  padding: 16px 32px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.1rem;
+  box-shadow: 0 12px 28px rgba(16, 185, 129, 0.18);
+  transition: all 0.3s ease;
+}
+
+.btn-primary-large:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 36px rgba(16, 185, 129, 0.24);
+}
+
+/* What to print section */
+.what-to-print {
+  padding: 60px 0;
+  background: #fff;
+}
+
+.print-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 32px;
+  margin-bottom: 32px;
+}
+
+.print-category {
+  background: var(--card);
+  border-radius: 14px;
+  padding: 28px;
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(15, 23, 42, 0.04);
+}
+
+.category-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 0 16px;
+  color: var(--text);
+}
+
+.category-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.category-list li {
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(15, 23, 42, 0.06);
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.category-list li:last-child {
+  border-bottom: none;
+}
+
+.category-list li::before {
+  content: '✓';
+  color: var(--accent);
+  font-weight: 700;
+  margin-right: 10px;
+}
+
+.info-box {
+  background: linear-gradient(135deg, #fff7ed 0%, #fef3c7 100%);
+  border: 1px solid rgba(245, 158, 11, 0.2);
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  margin-top: 32px;
+}
+
+.info-box p {
+  margin: 0;
+  color: var(--text);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Delivery zones section */
+.delivery-zones {
+  padding: 60px 0;
+  background: var(--bg-0);
+}
+
+.zones-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.zone-card {
+  background: var(--card);
+  border-radius: 14px;
+  padding: 28px;
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(15, 23, 42, 0.04);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.zone-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px rgba(15, 23, 42, 0.1);
+}
+
+.zone-primary {
+  border: 2px solid var(--accent);
+  background: linear-gradient(180deg, #ffffff 0%, #f0fdf4 100%);
+}
+
+.zone-icon {
+  font-size: 3rem;
+  margin-bottom: 16px;
+}
+
+.zone-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin: 0 0 12px;
+  color: var(--text);
+}
+
+.zone-desc {
+  color: var(--muted);
+  margin: 0 0 12px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.zone-detail {
+  color: var(--muted);
+  margin: 0;
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+/* FAQ Section */
+.faq-section {
+  margin-top: 48px;
+  padding: 32px;
+  background: var(--bg-1);
+  border-radius: 14px;
+}
+
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.faq-item {
+  background: var(--card);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(15, 23, 42, 0.04);
+}
+
+.faq-question {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 0 0 8px;
+  color: var(--text);
+}
+
+.faq-answer {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Footer updates */
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 32px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 20px 20px;
+  border-bottom: 1px solid rgba(2, 6, 23, 0.08);
+}
+
+.footer-brand h3 {
+  font-size: 1.8rem;
+  margin: 0 0 8px;
+  font-weight: 800;
+  color: var(--text);
+}
+
+.footer-brand p {
+  margin: 4px 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.footer-links h4 {
+  font-size: 1.1rem;
+  margin: 0 0 12px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.footer-links p {
+  margin: 8px 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.footer-links a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 20px;
+  color: var(--muted);
+  font-size: 0.85rem;
+  line-height: 1.6;
+}
+
+.features-grid-compact {
+  padding: 0;
+  margin-bottom: 32px;
+}
+
+/* Responsive adjustments for new sections */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 1.8rem;
+  }
+  
+  .section-intro {
+    font-size: 1rem;
+  }
+  
+  .print-options {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .zones-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .why-packya {
+    padding: 40px 0;
+  }
+  
+  .what-to-print,
+  .delivery-zones {
+    padding: 40px 0;
+  }
+  
+  .footer-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  
+  .btn-primary-large {
+    padding: 14px 24px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .showcase-desc {
+    font-size: 0.9rem;
+  }
+  
+  .faq-section {
+    padding: 20px;
+  }
+  
+  .zone-card {
+    padding: 20px;
+  }
+}

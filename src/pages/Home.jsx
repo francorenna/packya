@@ -43,9 +43,9 @@ export default function Home() {
 
       <header className="home-hero">
         <div className="container">
-          <h1 className="hero-title">IMPRESIÓN DE CAJAS Y BOLSAS PERSONALIZADAS 🚀</h1>
+          <h1 className="hero-title">Cajas y Bolsas Personalizadas en Mendoza</h1>
           <p className="hero-sub">
-            Packaging profesional listo para usar — sin vueltas, sin demoras.
+            Impresión digital desde 20 unidades. Entrega inmediata en Mendoza y envíos a toda Argentina. Packaging profesional para emprendedores y empresas.
           </p>
 
           <div className="hero-actions">
@@ -55,10 +55,10 @@ export default function Home() {
               target="_blank"
               rel="noreferrer"
             >
-              📲 Pedir presupuesto por WhatsApp
+              📲 Cotizar ahora por WhatsApp
             </a>
-            <a className="link-secondary" href="#beneficios">
-              Conoce nuestros beneficios
+            <a className="link-secondary" href="#por-que-packya">
+              Conocé por qué somos diferentes
             </a>
           </div>
         </div>
@@ -91,8 +91,8 @@ export default function Home() {
       {/* New showcase section under banner */}
       <section className="product-showcase">
         <div className="container">
-          {/* Removed repetitive heading; make Cajas de Pizza the main showcase title */}
-          <h2 className="showcase-title showcase-hero">Cajas de Pizza</h2>
+          <h2 className="showcase-title showcase-hero">Cajas de Pizza Personalizadas</h2>
+          <p className="showcase-desc">Impresión full color en cartón corrugado. Desde 20 unidades. Ideal para pizzerías y delivery.</p>
 
           <div
             className={`showcase-gallery ${expanded ? 'is-expanded' : ''}`}
@@ -134,7 +134,8 @@ export default function Home() {
       {/* Bolsas showcase, same layout/behavior as Cajas */}
       <section className="product-showcase">
         <div className="container">
-          <h2 className="showcase-title showcase-hero">Bolsas</h2>
+          <h2 className="showcase-title showcase-hero">Bolsas Personalizadas</h2>
+          <p className="showcase-desc">Bolsas kraft, papel madera y más. Impresión digital de alta calidad. Perfectas para tiendas y emprendimientos.</p>
 
           <div
             className={`showcase-gallery ${expandedB ? 'is-expanded' : ''}`}
@@ -176,7 +177,8 @@ export default function Home() {
       {/* Cajas de Vino showcase */}
       <section className="product-showcase">
         <div className="container">
-          <h2 className="showcase-title showcase-wine">Cajas de Vino</h2>
+          <h2 className="showcase-title showcase-wine">Cajas para Vinos y Botellas</h2>
+          <p className="showcase-desc">Packaging premium para bodegas y vinotecas. Diseños personalizados que destacan tu marca.</p>
 
           <div
             className={`showcase-gallery ${expandedV ? 'is-expanded' : ''}`}
@@ -219,59 +221,273 @@ export default function Home() {
       <section className="highlight-banner" aria-label="Destacados">
         <div className="container highlight-grid">
           <div className="highlight-item">
-            <h3>+ de 5.000 cajas impresas</h3>
+            <h3>Desde 20 unidades</h3>
           </div>
           <div className="highlight-item">
-            <h3>Clientes de Mendoza y el país</h3>
+            <h3>Tecnología única en Argentina</h3>
           </div>
           <div className="highlight-item">
-            <h3>Impresión propia</h3>
+            <h3>Impresión digital full color</h3>
           </div>
           <div className="highlight-item">
-            <h3>Entrega express real</h3>
+            <h3>Entrega inmediata en Mendoza</h3>
+          </div>
+        </div>
+      </section>
+
+      {/* Nueva sección: Por qué PACKYA es diferente */}
+      <section id="por-que-packya" className="why-packya">
+        <div className="container">
+          <h2 className="section-title">Por qué PACKYA es diferente</h2>
+          <p className="section-intro">
+            Somos la única empresa en Argentina con tecnología de impresión digital para packaging. 
+            Esto nos permite ofrecerte lo que nadie más puede.
+          </p>
+          
+          <div className="features-grid">
+            <article className="feature-card">
+              <div className="feature-head">🎯</div>
+              <h3 className="feature-title">Sin mínimos imposibles</h3>
+              <p className="feature-desc">
+                Imprimimos desde 20 unidades. A diferencia de la flexografía tradicional que exige mínimos de 1000+, 
+                PACKYA es ideal para emprendedores que recién arrancan o negocios que quieren probar diseños nuevos.
+              </p>
+            </article>
+
+            <article className="feature-card">
+              <div className="feature-head">🖨️</div>
+              <h3 className="feature-title">Impresión digital full color</h3>
+              <p className="feature-desc">
+                Tecnología de impresión directa sobre cartón. Sin placas, sin costos de setup. 
+                Podés cambiar el diseño en cada pedido sin pagar de más.
+              </p>
+            </article>
+
+            <article className="feature-card">
+              <div className="feature-head">⚡</div>
+              <h3 className="feature-title">Producción y entrega inmediata</h3>
+              <p className="feature-desc">
+                Fabricación propia en Mendoza. Entrega express en 24-48hs en zona metropolitana. 
+                Envíos a toda Argentina con seguimiento.
+              </p>
+            </article>
+
+            <article className="feature-card">
+              <div className="feature-head">💡</div>
+              <h3 className="feature-title">Alternativa real a la flexografía</h3>
+              <p className="feature-desc">
+                ¿Te pidieron 3000 cajas mínimo? En PACKYA imprimimos lo que realmente necesitás. 
+                Perfecto para testear mercado, eventos o temporadas cortas.
+              </p>
+            </article>
+
+            <article className="feature-card">
+              <div className="feature-head">🎨</div>
+              <h3 className="feature-title">Diseños variables sin costo extra</h3>
+              <p className="feature-desc">
+                Cada caja puede tener un diseño diferente en el mismo pedido. 
+                Ideal para ediciones limitadas, promociones o personalización por cliente.
+              </p>
+            </article>
+
+            <article className="feature-card">
+              <div className="feature-head">🏆</div>
+              <h3 className="feature-title">Para emprendedores que piensan en grande</h3>
+              <p className="feature-desc">
+                Tu packaging profesional desde el día uno, sin inversión inicial gigante. 
+                Crecé a tu ritmo, nosotros te acompañamos con cada pedido.
+              </p>
+            </article>
+          </div>
+
+          <div className="cta-center">
+            <a
+              className="btn-primary-large"
+              href="https://wa.me/5492615108060"
+              target="_blank"
+              rel="noreferrer"
+            >
+              💬 Consultar disponibilidad y precio
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Nueva sección: Qué podés imprimir */}
+      <section className="what-to-print">
+        <div className="container">
+          <h2 className="section-title">Qué podés imprimir con PACKYA</h2>
+          
+          <div className="print-options">
+            <div className="print-category">
+              <h3 className="category-title">📦 Cajas</h3>
+              <ul className="category-list">
+                <li>Cajas de pizza (25cm a 45cm)</li>
+                <li>Cajas para delivery de comida</li>
+                <li>Cajas para hamburguesas y sandwiches</li>
+                <li>Cajas para empanadas y panificados</li>
+                <li>Cajas para productos artesanales</li>
+                <li>Cajas para vinos y botellas</li>
+                <li>Cajas para regalos corporativos</li>
+                <li>Cajas para e-commerce</li>
+              </ul>
+            </div>
+
+            <div className="print-category">
+              <h3 className="category-title">🛍️ Bolsas</h3>
+              <ul className="category-list">
+                <li>Bolsas kraft personalizadas</li>
+                <li>Bolsas papel madera con tu logo</li>
+                <li>Bolsas para delivery</li>
+                <li>Bolsas para tiendas de ropa</li>
+                <li>Bolsas para librerías</li>
+                <li>Bolsas para farmacias</li>
+                <li>Bolsas para ferias y eventos</li>
+                <li>Bolsas institucionales</li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="info-box">
+            <p>
+              <strong>¿No encontrás lo que buscás?</strong> Consultanos por WhatsApp. 
+              Tenemos más formatos y podemos desarrollar soluciones a medida.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Nueva sección: Zonas de entrega */}
+      <section className="delivery-zones">
+        <div className="container">
+          <h2 className="section-title">Zonas de entrega</h2>
+          
+          <div className="zones-grid">
+            <div className="zone-card zone-primary">
+              <div className="zone-icon">🚚</div>
+              <h3 className="zone-title">Entrega inmediata en Mendoza</h3>
+              <p className="zone-desc">
+                <strong>24-48 horas</strong> en Gran Mendoza: Capital, Godoy Cruz, Las Heras, 
+                Guaymallén, Maipú, Luján de Cuyo.
+              </p>
+              <p className="zone-detail">
+                También llegamos a San Rafael, San Martín, Tunuyán, Tupungato y Valle de Uco.
+              </p>
+            </div>
+
+            <div className="zone-card">
+              <div className="zone-icon">📍</div>
+              <h3 className="zone-title">Retiro en planta</h3>
+              <p className="zone-desc">
+                Retirá tu pedido en nuestras instalaciones en Mendoza. 
+                Coordinamos horario por WhatsApp.
+              </p>
+            </div>
+
+            <div className="zone-card">
+              <div className="zone-icon">🇦🇷</div>
+              <h3 className="zone-title">Envíos a toda Argentina</h3>
+              <p className="zone-desc">
+                Despachamos a Buenos Aires, Córdoba, Rosario, y todo el país vía correo. 
+                Tiempo estimado: 3-7 días hábiles según destino.
+              </p>
+            </div>
+          </div>
+
+          <div className="cta-center">
+            <a
+              className="btn-primary-large"
+              href="https://wa.me/5492615108060"
+              target="_blank"
+              rel="noreferrer"
+            >
+              📲 Consultar costo de envío a mi zona
+            </a>
           </div>
         </div>
       </section>
 
       <main className="container main-content">
-        <section id="beneficios" className="features-grid">
+        <section id="beneficios" className="features-grid-compact">
+          <h2 className="section-title-small">Cómo trabajamos</h2>
+          
           <article className="feature-card">
             <div className="feature-head">⚡</div>
-            <h3 className="feature-title">Entrega rápida</h3>
+            <h3 className="feature-title">1. Contacto express</h3>
             <p className="feature-desc">
-              Producción express y logística optimizada para que recibas tu pedido a tiempo.
-            </p>
-          </article>
-
-          <article className="feature-card">
-            <div className="feature-head">📦</div>
-            <h3 className="feature-title">Packaging profesional</h3>
-            <p className="feature-desc">
-              Cajas y bolsas con acabados de calidad listos para la venta o envío.
+              Escribinos por WhatsApp con lo que necesitás. Respondemos en minutos con asesoramiento personalizado.
             </p>
           </article>
 
           <article className="feature-card">
             <div className="feature-head">🎨</div>
-            <h3 className="feature-title">Diseño incluido</h3>
+            <h3 className="feature-title">2. Diseño y presupuesto</h3>
             <p className="feature-desc">
-              Adaptamos tu marca al packaging con propuestas prácticas y escalables.
+              Te enviamos propuesta visual y cotización en 24-48 horas. Si ya tenés diseño, lo adaptamos sin cargo.
+            </p>
+          </article>
+
+          <article className="feature-card">
+            <div className="feature-head">📦</div>
+            <h3 className="feature-title">3. Producción y entrega</h3>
+            <p className="feature-desc">
+              Fabricamos tu pedido con seguimiento en tiempo real. Entrega coordinada o envío con tracking.
             </p>
           </article>
         </section>
 
-        <section className="how-section">
-          <h4 className="how-title">¿Cómo trabajamos?</h4>
-          <ol className="how-list">
-            <li>Consultoría rápida para medir tus necesidades.</li>
-            <li>Propuesta de diseño y presupuesto en 24-48 horas.</li>
-            <li>Producción y entrega con seguimiento.</li>
-          </ol>
+        <section className="faq-section">
+          <h2 className="section-title-small">Preguntas frecuentes</h2>
+          <div className="faq-list">
+            <div className="faq-item">
+              <h3 className="faq-question">¿Cuál es el mínimo de unidades?</h3>
+              <p className="faq-answer">
+                Desde 20 unidades. No cobramos costos de setup ni placas como en flexografía tradicional.
+              </p>
+            </div>
+            <div className="faq-item">
+              <h3 className="faq-question">¿Cuánto tarda la producción?</h3>
+              <p className="faq-answer">
+                24-48 horas para pedidos estándar en Mendoza. Para envíos al interior sumá 3-7 días hábiles según destino.
+              </p>
+            </div>
+            <div className="faq-item">
+              <h3 className="faq-question">¿Puedo imprimir a todo color?</h3>
+              <p className="faq-answer">
+                Sí, impresión digital full color CMYK. Podés usar fotos, degradados y cualquier diseño complejo.
+              </p>
+            </div>
+            <div className="faq-item">
+              <h3 className="faq-question">¿Hacen el diseño?</h3>
+              <p className="faq-answer">
+                Sí, incluimos adaptación de tu marca al packaging. Si no tenés diseño, te ayudamos a crearlo desde cero.
+              </p>
+            </div>
+          </div>
         </section>
       </main>
 
       <footer className="home-footer">
-        © {new Date().getFullYear()} Packya — Página en progreso.
+        <div className="footer-content">
+          <div className="footer-brand">
+            <h3>PACKYA</h3>
+            <p>Impresión digital de cajas y bolsas personalizadas</p>
+            <p>Mendoza, Argentina</p>
+          </div>
+          <div className="footer-links">
+            <h4>Contacto</h4>
+            <p>
+              <a href="https://wa.me/5492615108060" target="_blank" rel="noreferrer">
+                WhatsApp: +54 9 261 510-8060
+              </a>
+            </p>
+            <p>Seguinos en redes sociales ⬇️</p>
+          </div>
+        </div>
+        <div className="footer-bottom">
+          © {new Date().getFullYear()} PACKYA — Cajas y bolsas personalizadas Mendoza | 
+          Impresión digital desde 20 unidades | Packaging para emprendedores
+        </div>
       </footer>
 
       {/* Social links */}
