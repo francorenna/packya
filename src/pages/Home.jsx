@@ -43,7 +43,7 @@ export default function Home() {
 
       <header className="home-hero">
         <div className="container">
-          <h1 className="hero-title">Imprimimos tus cajas y bolsas en tiempo récord</h1>
+          <h1 className="hero-title">IMPRESIÓN DE CAJAS Y BOLSAS PERSONALIZADAS 🚀</h1>
           <p className="hero-sub">
             Packaging profesional listo para usar — sin vueltas, sin demoras.
           </p>
