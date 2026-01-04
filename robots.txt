@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://packya.com.ar/sitemap.xml
