@@ -180,3 +180,75 @@
     text-align: center;
   }
 }
+
+/* SEO Footer - Professional & Clean */
+.seo-footer {
+  margin-top: 100px;
+  padding: 60px 0 40px;
+  border-top: 1px solid #e5e5e5;
+  text-align: center;
+}
+
+.seo-footer-title {
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 20px;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.seo-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.seo-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  font-size: 15px;
+  transition: all 0.3s ease;
+  position: relative;
+  padding-bottom: 4px;
+}
+
+.seo-links a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 50%;
+  background-color: #22c55e;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.seo-links a:hover {
+  color: #22c55e;
+}
+
+.seo-links a:hover::after {
+  width: 100%;
+}
+
+/* Responsive para footer SEO */
+@media (max-width: 768px) {
+  .seo-footer {
+    margin-top: 80px;
+    padding: 40px 0 30px;
+  }
+
+  .seo-links {
+    gap: 20px;
+    padding: 0 16px;
+  }
+
+  .seo-links a {
+    font-size: 14px;
+  }
+}

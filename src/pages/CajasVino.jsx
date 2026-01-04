@@ -1,4 +1,5 @@
 import { Helmet } from "react-helmet";
+import { Link } from "react-router-dom";
 
 export default function CajasVino() {
   return (
@@ -60,6 +61,19 @@ export default function CajasVino() {
         >
           Cotizar cajas de vino por WhatsApp
         </a>
+
+        <footer className="seo-footer">
+          <p className="seo-footer-title">Explorá más productos</p>
+          <div className="seo-links">
+            <Link to="/cajas-de-pizza">Cajas de Pizza</Link>
+            <Link to="/bolsas-kraft">Bolsas Kraft</Link>
+            <Link to="/cajas-de-vino">Cajas de Vino</Link>
+            <Link to="/">Inicio</Link>
+            <a href="https://wa.me/5492615108060" target="_blank" rel="noreferrer">
+              WhatsApp
+            </a>
+          </div>
+        </footer>
       </section>
     </>
   );

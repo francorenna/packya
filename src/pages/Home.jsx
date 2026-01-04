@@ -1,5 +1,6 @@
 // ...existing code...
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 import '../styles/home.css'
 
 import cajas1 from '../assets/cajas1.jpeg'
@@ -522,6 +523,19 @@ export default function Home() {
           </a>
         </div>
       </section>
+
+      <footer className="seo-footer">
+        <p className="seo-footer-title">Explorá nuestros productos</p>
+        <div className="seo-links">
+          <Link to="/cajas-de-pizza">Cajas de Pizza</Link>
+          <Link to="/bolsas-kraft">Bolsas Kraft</Link>
+          <Link to="/cajas-de-vino">Cajas de Vino</Link>
+          <Link to="/">Inicio</Link>
+          <a href="https://wa.me/5492615108060" target="_blank" rel="noreferrer">
+            WhatsApp
+          </a>
+        </div>
+      </footer>
     </div>
   )
 }
