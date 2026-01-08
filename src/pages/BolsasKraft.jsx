@@ -55,7 +55,7 @@ export default function BolsasKraft() {
         </p>
 
         <a
-          href="https://wa.me/5492615108060"
+          href="https://wa.me/5492614177745"
           className="seo-btn"
           target="_blank"
           rel="noreferrer"
@@ -70,7 +70,7 @@ export default function BolsasKraft() {
             <Link to="/bolsas-kraft">Bolsas Kraft</Link>
             <Link to="/cajas-de-vino">Cajas de Vino</Link>
             <Link to="/">Inicio</Link>
-            <a href="https://wa.me/5492615108060" target="_blank" rel="noreferrer">
+            <a href="https://wa.me/5492614177745" target="_blank" rel="noreferrer">
               WhatsApp
             </a>
           </div>

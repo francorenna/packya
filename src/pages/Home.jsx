@@ -52,7 +52,7 @@ export default function Home() {
           <div className="hero-actions">
             <a
               className="btn-primary"
-              href="https://wa.me/5492615108060"
+              href="https://wa.me/5492614177745"
               target="_blank"
               rel="noreferrer"
             >
@@ -70,7 +70,7 @@ export default function Home() {
         <div className="container">
           <div className="banners-grid">
             <a
-              href="https://wa.me/5492615108060"
+              href="https://wa.me/5492614177745"
               target="_blank"
               rel="noreferrer"
               className="banner-link"
@@ -78,7 +78,7 @@ export default function Home() {
               <img src={pcb} alt="Banner PCB - Contactar por WhatsApp" className="banner-image" />
             </a>
             <a
-              href="https://wa.me/5492615108060"
+              href="https://wa.me/5492614177745"
               target="_blank"
               rel="noreferrer"
               className="banner-link"
@@ -304,7 +304,7 @@ export default function Home() {
           <div className="cta-center">
             <a
               className="btn-primary-large"
-              href="https://wa.me/5492615108060"
+              href="https://wa.me/5492614177745"
               target="_blank"
               rel="noreferrer"
             >
@@ -398,7 +398,7 @@ export default function Home() {
           <div className="cta-center">
             <a
               className="btn-primary-large"
-              href="https://wa.me/5492615108060"
+              href="https://wa.me/5492614177745"
               target="_blank"
               rel="noreferrer"
             >
@@ -478,8 +478,8 @@ export default function Home() {
           <div className="footer-links">
             <h4>Contacto</h4>
             <p>
-              <a href="https://wa.me/5492615108060" target="_blank" rel="noreferrer">
-                WhatsApp: +54 9 261 510-8060
+              <a href="https://wa.me/5492614177745" target="_blank" rel="noreferrer">
+                WhatsApp: +54 9 261 417-7745
               </a>
             </p>
             <p>Seguinos en redes sociales ⬇️</p>
@@ -531,7 +531,7 @@ export default function Home() {
           <Link to="/bolsas-kraft">Bolsas Kraft</Link>
           <Link to="/cajas-de-vino">Cajas de Vino</Link>
           <Link to="/">Inicio</Link>
-          <a href="https://wa.me/5492615108060" target="_blank" rel="noreferrer">
+          <a href="https://wa.me/5492614177745" target="_blank" rel="noreferrer">
             WhatsApp
           </a>
         </div>
