@@ -1,4 +1,6 @@
 import React, { useState, useRef } from 'react'
+import { Link } from 'react-router-dom'
+import { Helmet } from 'react-helmet'
 import '../styles/simulador.css'
 import cajablanca from '../assets/cajablanca.png'
 import cajamarron from '../assets/cajamarron.png'
@@ -114,9 +116,16 @@ export default function Simulador() {
 
   return (
     <div className="simulador-root">
+      <Helmet>
+        <title>Simulador de cajas personalizadas – Probá tu logo | PACKYA</title>
+        <meta name="description" content="Subí tu logo y mirá cómo queda en una caja personalizada PACKYA. Producción propia desde 50 unidades. Envíos a todo el país." />
+        <meta property="og:title" content="Simulador de cajas personalizadas – Probá tu logo | PACKYA" />
+        <meta property="og:description" content="Subí tu logo y mirá cómo queda en una caja personalizada PACKYA. Producción propia desde 50 unidades." />
+      </Helmet>
+      
       <div className="simulador-container">
         <header className="simulador-header">
-          <h1 className="simulador-title">Probá tu logo en una caja PACKYA</h1>
+          <h1 className="simulador-title">Simulador de cajas personalizadas</h1>
           <p className="simulador-subtitle">
             Subí tu logo y mirá cómo queda en tu packaging personalizado
           </p>
@@ -242,6 +251,27 @@ export default function Simulador() {
         <p className="simulador-note">
           Simulación ilustrativa — el resultado final puede variar levemente
         </p>
+
+        <div className="simulador-seo-text">
+          <p>
+            Este simulador te permite probar tu logo en cajas personalizadas antes de comprar. 
+            PACKYA fabrica cajas y bolsas personalizadas en Mendoza con impresión profesional y 
+            entrega rápida a todo el país.
+          </p>
+          <div className="simulador-links">
+            <a 
+              href="https://wa.me/5492614177745" 
+              target="_blank" 
+              rel="noreferrer"
+              className="simulador-link"
+            >
+              📱 Consultar por WhatsApp
+            </a>
+            <Link to="/" className="simulador-link">
+              🏠 Volver al inicio
+            </Link>
+          </div>
+        </div>
       </div>
     </div>
   )
