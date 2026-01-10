@@ -115,11 +115,27 @@ body{
 }
 
 .hero-subtitle{
-  margin: 0 0 32px;
+  margin: 0 0 16px;
   font-size: clamp(1.125rem, 1.5vw, 1.25rem);
   line-height: 1.6;
   color: #525252;
   font-weight: 400;
+}
+
+.hero-urgency{
+  margin: 0 0 28px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9375rem;
+  color: #16a34a;
+  font-weight: 600;
+}
+
+.clock-icon{
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
 }
 
 .hero-features{
@@ -223,7 +239,7 @@ body{
 
 .hero-image{
   position: relative;
-  transform: translateZ(0);
+  transform: translateZ(0) scale(1.15);
 }
 
 .image-frame{
