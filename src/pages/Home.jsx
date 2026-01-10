@@ -60,7 +60,7 @@ export default function Home() {
                 <circle cx="12" cy="12" r="10"></circle>
                 <polyline points="12 6 12 12 16 14"></polyline>
               </svg>
-              Producción en 24–48 hs según cantidad
+              Producción en 24–48 hs | Desde 50 unidades
             </p>
             
             <ul className="hero-features">
@@ -99,6 +99,7 @@ export default function Home() {
               <a className="btn-secondary" href="#product-showcase">
                 Ver trabajos y precios
               </a>
+              <span className="btn-secondary-note">Sin compromiso · Respondemos rápido</span>
             </div>
 
             <Link to="/simulador" className="btn-simulator">
@@ -115,7 +116,7 @@ export default function Home() {
               <svg className="star-icon" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
               </svg>
-              Clientes reales · Producción local · Entrega rápida
+              Más de 1.000 cajas producidas para marcas de Mendoza
             </p>
           </div>
           
