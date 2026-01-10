@@ -10,6 +10,7 @@ export default function Simulador() {
   const [logoRotation, setLogoRotation] = useState(0)
   const [isDragging, setIsDragging] = useState(false)
   const [boxType, setBoxType] = useState('blanca')
+  const [showMessage, setShowMessage] = useState(false)
   const canvasRef = useRef(null)
   const containerRef = useRef(null)
 
@@ -91,19 +92,24 @@ export default function Simulador() {
   const handleWhatsAppShare = async () => {
     const imageData = await generateImage()
     
-    // Crear un mensaje para WhatsApp
-    const message = encodeURIComponent('Hola PACKYA, quiero cotizar esta caja con mi logo')
-    const whatsappUrl = `https://wa.me/5492614177745?text=${message}`
+    // Mostrar mensaje de instrucción
+    setShowMessage(true)
     
-    // En un entorno real, necesitarías subir la imagen a un servidor
-    // Por ahora, abrimos WhatsApp con el mensaje
-    window.open(whatsappUrl, '_blank')
-    
-    // Descargar la imagen localmente para que el usuario la pueda adjuntar
+    // Descargar la imagen primero
     const link = document.createElement('a')
     link.download = 'mi-caja-packya.png'
     link.href = imageData
     link.click()
+    
+    // Esperar un momento y luego abrir WhatsApp
+    setTimeout(() => {
+      const message = encodeURIComponent('Hola PACKYA, quiero cotizar esta caja con mi logo. Te adjunto la imagen 👇')
+      const whatsappUrl = `https://wa.me/5492614177745?text=${message}`
+      window.open(whatsappUrl, '_blank')
+      
+      // Ocultar mensaje después de 5 segundos
+      setTimeout(() => setShowMessage(false), 5000)
+    }, 500)
   }
 
   return (
@@ -215,6 +221,12 @@ export default function Simulador() {
         </div>
 
         <div className="simulador-actions">
+          {showMessage && (
+            <div className="instruction-message">
+              📥 Imagen descargada. Ahora adjuntala en WhatsApp manualmente
+            </div>
+          )}
+          
           <button 
             className="btn-whatsapp-sim"
             onClick={handleWhatsAppShare}

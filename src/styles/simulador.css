@@ -235,8 +235,33 @@
 /* Actions */
 .simulador-actions {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
   margin-bottom: 24px;
+}
+
+.instruction-message {
+  background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+  color: #ffffff;
+  padding: 14px 24px;
+  border-radius: 10px;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(34, 197, 94, 0.25);
+  animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .btn-whatsapp-sim {
