@@ -1,0 +1,345 @@
+/* Simulador - Industrial Modern Style */
+
+.simulador-root {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #ffffff 0%, #f5f5f5 100%);
+  padding: 60px 20px;
+}
+
+.simulador-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.simulador-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.simulador-title {
+  margin: 0 0 16px;
+  font-size: clamp(2.25rem, 4vw, 3.25rem);
+  line-height: 1.1;
+  font-family: 'Inter', sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: #0a0a0a;
+}
+
+.simulador-subtitle {
+  margin: 0;
+  font-size: clamp(1.125rem, 1.5vw, 1.25rem);
+  line-height: 1.6;
+  color: #525252;
+  font-weight: 400;
+}
+
+.simulador-content {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+/* Upload Section */
+.upload-section {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.box-selector {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  background: #ffffff;
+  padding: 6px;
+  border-radius: 10px;
+  border: 1px solid #e5e5e5;
+}
+
+.box-selector-btn {
+  padding: 12px 16px;
+  background: transparent;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: #525252;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.box-selector-btn:hover {
+  background: #f5f5f5;
+  color: #171717;
+}
+
+.box-selector-btn.active {
+  background: #0a0a0a;
+  color: #ffffff;
+  box-shadow: 0 2px 8px rgba(10, 10, 10, 0.15);
+}
+
+.upload-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 32px 24px;
+  background: #ffffff;
+  border: 2px dashed #d4d4d4;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #171717;
+}
+
+.upload-button:hover {
+  border-color: #a3a3a3;
+  background: #fafafa;
+}
+
+.upload-icon {
+  width: 48px;
+  height: 48px;
+  color: #525252;
+}
+
+.controls {
+  background: #ffffff;
+  padding: 24px;
+  border-radius: 12px;
+  border: 1px solid #e5e5e5;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.control-label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: #171717;
+}
+
+.control-slider {
+  width: 100%;
+  height: 6px;
+  border-radius: 3px;
+  background: #e5e5e5;
+  outline: none;
+  -webkit-appearance: none;
+}
+
+.control-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #0a0a0a;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.control-slider::-webkit-slider-thumb:hover {
+  background: #171717;
+  transform: scale(1.1);
+}
+
+.control-slider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #0a0a0a;
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s ease;
+}
+
+.control-slider::-moz-range-thumb:hover {
+  background: #171717;
+  transform: scale(1.1);
+}
+
+.control-hint {
+  margin: 0;
+  font-size: 0.875rem;
+  color: #737373;
+  font-weight: 400;
+}
+
+/* Preview Section */
+.preview-section {
+  position: relative;
+  background: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid #e5e5e5;
+  box-shadow: 
+    0 4px 8px rgba(0, 0, 0, 0.06),
+    0 12px 24px rgba(0, 0, 0, 0.08);
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.box-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  user-select: none;
+}
+
+.logo-overlay {
+  position: absolute;
+  transform-origin: center center;
+  user-select: none;
+  max-width: 100%;
+  height: auto;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.15));
+  transition: filter 0.2s ease;
+}
+
+.logo-overlay:hover {
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.25));
+}
+
+.preview-placeholder {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  color: #a3a3a3;
+}
+
+.preview-placeholder svg {
+  width: 80px;
+  height: 80px;
+}
+
+.preview-placeholder p {
+  margin: 0;
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+
+/* Actions */
+.simulador-actions {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.btn-whatsapp-sim {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: #25D366;
+  color: #ffffff;
+  padding: 20px 40px;
+  border-radius: 10px;
+  font-size: 1.125rem;
+  font-weight: 600;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.3);
+}
+
+.btn-whatsapp-sim:hover:not(:disabled) {
+  background: #22c55e;
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 12px 32px rgba(37, 211, 102, 0.4);
+}
+
+.btn-whatsapp-sim:active:not(:disabled) {
+  transform: translateY(-2px) scale(1.01);
+  transition: all 0.1s ease;
+}
+
+.btn-whatsapp-sim:disabled {
+  background: #d4d4d4;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.whatsapp-icon {
+  width: 26px;
+  height: 26px;
+  flex-shrink: 0;
+}
+
+.simulador-note {
+  text-align: center;
+  margin: 0;
+  font-size: 0.875rem;
+  color: #737373;
+  font-style: italic;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .simulador-content {
+    grid-template-columns: 280px 1fr;
+    gap: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .simulador-root {
+    padding: 40px 20px;
+  }
+
+  .simulador-header {
+    margin-bottom: 40px;
+  }
+
+  .simulador-content {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .upload-section {
+    order: 1;
+  }
+
+  .preview-section {
+    order: 2;
+    min-height: 400px;
+  }
+
+  .btn-whatsapp-sim {
+    width: 100%;
+    justify-content: center;
+    padding: 18px 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .simulador-root {
+    padding: 32px 16px;
+  }
+
+  .preview-section {
+    min-height: 300px;
+  }
+
+  .upload-button {
+    padding: 24px 16px;
+  }
+
+  .btn-whatsapp-sim {
+    padding: 16px 24px;
+    font-size: 1rem;
+  }
+}

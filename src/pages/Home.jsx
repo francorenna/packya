@@ -100,6 +100,16 @@ export default function Home() {
                 Ver trabajos y precios
               </a>
             </div>
+
+            <Link to="/simulador" className="btn-simulator">
+              <div className="btn-simulator-content">
+                <span className="simulator-emoji">🧪</span>
+                <div className="simulator-text">
+                  <span className="simulator-title">Probá tu logo en una caja</span>
+                  <span className="simulator-subtitle">Mirá cómo queda tu marca antes de comprar</span>
+                </div>
+              </div>
+            </Link>
             
             <p className="hero-trust">
               <svg className="star-icon" viewBox="0 0 24 24" fill="currentColor">

@@ -5,6 +5,7 @@ import Home from './pages/Home'
 import CajasPizza from './pages/CajasPizza'
 import BolsasKraft from './pages/BolsasKraft'
 import CajasVino from './pages/CajasVino'
+import Simulador from './pages/Simulador'
 import Banner from './components/banner'
 
 export default function App() {
@@ -25,6 +26,7 @@ export default function App() {
           <Route path="/cajas-de-pizza" element={<CajasPizza />} />
           <Route path="/bolsas-kraft" element={<BolsasKraft />} />
           <Route path="/cajas-de-vino" element={<CajasVino />} />
+          <Route path="/simulador" element={<Simulador />} />
         </Routes>
       )}
     </>

@@ -9,7 +9,8 @@ const __dirname = path.dirname(__filename);
 const seoRoutes = [
   'cajas-de-pizza',
   'bolsas-kraft',
-  'cajas-de-vino'
+  'cajas-de-vino',
+  'simulador'
 ];
 
 const distPath = path.join(__dirname, 'dist');
