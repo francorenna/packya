@@ -10,6 +10,7 @@ export default function BolsasKraft() {
           name="description"
           content="Bolsas kraft impresas a todo color desde 20 unidades. Ideales para comercios, boutiques, ferias y regalos. Impresión digital sin mínimos en Mendoza."
         />
+        <link rel="canonical" href="https://packya.com.ar/bolsas-kraft" />
       </Helmet>
 
       <section className="seo-section">

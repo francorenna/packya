@@ -121,6 +121,7 @@ export default function Simulador() {
         <meta name="description" content="Subí tu logo y mirá cómo queda en una caja personalizada PACKYA. Producción propia desde 50 unidades. Envíos a todo el país." />
         <meta property="og:title" content="Simulador de cajas personalizadas – Probá tu logo | PACKYA" />
         <meta property="og:description" content="Subí tu logo y mirá cómo queda en una caja personalizada PACKYA. Producción propia desde 50 unidades." />
+        <link rel="canonical" href="https://packya.com.ar/simulador" />
       </Helmet>
       
       <div className="simulador-container">

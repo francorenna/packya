@@ -10,6 +10,7 @@ export default function CajasPizza() {
           name="description"
           content="Imprimí cajas de pizza personalizadas desde 20 unidades. PACKYA ofrece impresión digital full color, entrega inmediata en Mendoza y envíos a todo el país."
         />
+        <link rel="canonical" href="https://packya.com.ar/cajas-de-pizza" />
       </Helmet>
 
       <section className="seo-section">

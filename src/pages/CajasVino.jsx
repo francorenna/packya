@@ -10,6 +10,7 @@ export default function CajasVino() {
           name="description"
           content="Cajas de vino impresas full color para bodegas, vinotecas y regalos empresariales. Producción desde 20 unidades con impresión digital en Mendoza."
         />
+        <link rel="canonical" href="https://packya.com.ar/cajas-de-vino" />
       </Helmet>
 
       <section className="seo-section">

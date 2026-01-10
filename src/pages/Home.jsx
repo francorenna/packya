@@ -1,6 +1,7 @@
 // ...existing code...
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { Helmet } from 'react-helmet'
 import '../styles/home.css'
 
 import cajas1 from '../assets/cajas1.jpeg'
@@ -41,6 +42,9 @@ export default function Home() {
 
   return (
     <div className="home-root">
+      <Helmet>
+        <link rel="canonical" href="https://packya.com.ar/" />
+      </Helmet>
       {/* Removed construction badge as requested */}
 
       <header className="home-hero">
