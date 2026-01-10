@@ -184,6 +184,7 @@ body{
   color: #737373;
   font-weight: 400;
   text-align: center;
+  width: 100%;
   padding: 0 8px;
 }
 
@@ -234,7 +235,7 @@ body{
 }
 
 .simulator-title{
-  font-size: 1.125rem;
+  font-size: 1.25rem;
   font-weight: 600;
   color: #ffffff;
   line-height: 1.2;
