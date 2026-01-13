@@ -1,7 +1,22 @@
 import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
+import vino0 from "../assets/vino0.png";
+import vino1 from "../assets/vino1.jpeg";
+
+const imagenesVino = [vino0, vino1];
 
 export default function CajasVino() {
+  const [imagenActual, setImagenActual] = useState(0);
+
+  useEffect(() => {
+    const intervalo = setInterval(() => {
+      setImagenActual((prev) => (prev + 1) % imagenesVino.length);
+    }, 3000); // Cambia cada 3 segundos
+
+    return () => clearInterval(intervalo);
+  }, []);
+
   return (
     <>
       <Helmet>
@@ -14,6 +29,27 @@ export default function CajasVino() {
       </Helmet>
 
       <section className="seo-section">
+        <div style={{
+          textAlign: 'center',
+          marginBottom: '2rem',
+          padding: '1rem'
+        }}>
+          <img
+            src={imagenesVino[imagenActual]}
+            alt={`Caja de vino personalizada ${imagenActual + 1}`}
+            style={{
+              maxWidth: '100%',
+              maxHeight: '500px',
+              objectFit: 'contain',
+              borderRadius: '8px',
+              boxShadow: '0 4px 8px rgba(0,0,0,0.1)',
+              transition: 'opacity 0.5s ease-in-out'
+            }}
+          />
+          <div style={{ marginTop: '1rem', fontSize: '14px', color: '#666' }}>
+            {imagenActual + 1} / {imagenesVino.length}
+          </div>
+        </div>
         <h1>Cajas de Vino Personalizadas</h1>
 
         <p>

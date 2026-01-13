@@ -1,17 +1,25 @@
 // ...existing code...
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet'
 import '../styles/home.css'
 
-import cajas1 from '../assets/cajas1.jpeg'
 import cajas0 from '../assets/cajas0.png'
+import cajas1 from '../assets/cajas1.jpeg'
 import cajas2 from '../assets/cajas2.jpeg'
 import cajas3 from '../assets/cajas3.jpeg'
 import cajas4 from '../assets/cajas4.jpeg'
 import cajas5 from '../assets/cajas5.jpeg'
 import cajas6 from '../assets/cajas6.jpeg'
 import cajas7 from '../assets/cajas7.jpeg'
+import cajas8 from '../assets/cajas8.jpg'
+import cajas9 from '../assets/cajas9.jpg'
+import cajas10 from '../assets/cajas10.png'
+import cajas11 from '../assets/cajas11.png'
+import cajas12 from '../assets/cajas12.png'
+import cajas13 from '../assets/cajas13.jpg'
+import cajas14 from '../assets/cajas14.jpg'
+import cajas15 from '../assets/cajas15.jpg'
 import imagenportada from '../assets/imagenportada.png'
 
 import bolsas0 from '../assets/bolsas0.png'
@@ -20,6 +28,9 @@ import bolsas2 from '../assets/bolsas2.jpeg'
 import bolsas3 from '../assets/bolsas3.jpeg'
 import bolsas4 from '../assets/bolsas4.jpeg'
 import bolsas5 from '../assets/bolsas5.jpeg'
+import bolsas6 from '../assets/bolsas6.png'
+import bolsas7 from '../assets/bolsas7.jpg'
+import bolsas8 from '../assets/bolsas8.png'
 
 import vino0 from '../assets/vino0.png'
 import vino1 from '../assets/vino1.jpeg'
@@ -30,15 +41,42 @@ import pcm from '../assets/pcm.png'
 export default function Home() {
   const [expanded, setExpanded] = useState(false)
   const [mainIndex, setMainIndex] = useState(0)
-  const gallery = [cajas0, cajas1, cajas2, cajas3, cajas4, cajas5, cajas6, cajas7]
+  const gallery = [
+    cajas0, cajas1, cajas2, cajas3, cajas4, cajas5, cajas6, cajas7,
+    cajas8, cajas9, cajas10, cajas11, cajas12, cajas13, cajas14, cajas15
+  ]
 
   const [expandedB, setExpandedB] = useState(false)
   const [mainIndexB, setMainIndexB] = useState(0)
-  const bags = [bolsas0, bolsas1, bolsas2, bolsas3, bolsas4, bolsas5]
+  const bags = [bolsas0, bolsas1, bolsas2, bolsas3, bolsas4, bolsas5, bolsas6, bolsas7, bolsas8]
 
   const [expandedV, setExpandedV] = useState(false)
   const [mainIndexV, setMainIndexV] = useState(0)
   const wines = [vino0, vino1]
+
+  // Carrusel automático para cajas
+  useEffect(() => {
+    const intervalo = setInterval(() => {
+      setMainIndex((prev) => (prev + 1) % gallery.length)
+    }, 3000)
+    return () => clearInterval(intervalo)
+  }, [gallery.length])
+
+  // Carrusel automático para bolsas
+  useEffect(() => {
+    const intervalo = setInterval(() => {
+      setMainIndexB((prev) => (prev + 1) % bags.length)
+    }, 3000)
+    return () => clearInterval(intervalo)
+  }, [bags.length])
+
+  // Carrusel automático para vino
+  useEffect(() => {
+    const intervalo = setInterval(() => {
+      setMainIndexV((prev) => (prev + 1) % wines.length)
+    }, 3000)
+    return () => clearInterval(intervalo)
+  }, [wines.length])
 
   return (
     <div className="home-root">
