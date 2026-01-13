@@ -724,6 +724,10 @@ body{
 .social-btn.instagram{background:linear-gradient(45deg,#f58529,#dd2a7b,#8134af)}
 .social-btn.instagram .social-icon{filter:drop-shadow(0 6px 12px rgba(0,0,0,0.18))}
 
+/* Facebook button */
+.social-btn.facebook{background:#1877f2}
+.social-btn.facebook .social-icon{filter:drop-shadow(0 6px 12px rgba(0,0,0,0.18))}
+
 /* TikTok dark button with small accent */
 .social-btn.tiktok{background:#010101}
 .social-btn.tiktok .social-icon{width:22px;height:22px}
