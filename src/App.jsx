@@ -8,6 +8,7 @@ import CajasVino from './pages/CajasVino'
 import CajasEmbalaje from './pages/CajasEmbalaje'
 import Simulador from './pages/Simulador'
 import Banner from './components/banner'
+import Navbar from './components/Navbar'
 
 export default function App() {
   const [showSplash, setShowSplash] = useState(true)
@@ -18,6 +19,7 @@ export default function App() {
 
   return (
     <>
+      <Navbar />
       <Banner />
       {showSplash && isHome ? (
         <Splash duration={2000} onFinish={() => setShowSplash(false)} />

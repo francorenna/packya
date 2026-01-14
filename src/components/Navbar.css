@@ -1,0 +1,243 @@
+/* Navbar Styles */
+.navbar {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background: #ffffff;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+.navbar-logo:hover {
+  opacity: 0.85;
+}
+
+.navbar-logo-img {
+  height: 45px;
+  width: auto;
+  display: block;
+}
+
+.navbar-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 32px;
+  height: 32px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1001;
+}
+
+.navbar-toggle span {
+  width: 100%;
+  height: 3px;
+  background: #0f172a;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  transform-origin: center;
+}
+
+.navbar-toggle.active span:nth-child(1) {
+  transform: translateY(10px) rotate(45deg);
+}
+
+.navbar-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.navbar-toggle.active span:nth-child(3) {
+  transform: translateY(-10px) rotate(-45deg);
+}
+
+.navbar-menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 8px;
+  align-items: center;
+}
+
+.navbar-link {
+  display: block;
+  padding: 10px 16px;
+  color: #0f172a;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.navbar-link:hover {
+  background: #f1f5f9;
+  color: #16a34a;
+}
+
+.navbar-link.active {
+  color: #16a34a;
+  background: #f0fdf4;
+}
+
+.navbar-link-special {
+  background: linear-gradient(135deg, #f59e0b 0%, #ef4444 100%);
+  color: white !important;
+  font-weight: 600;
+}
+
+.navbar-link-special:hover {
+  background: linear-gradient(135deg, #d97706 0%, #dc2626 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);
+}
+
+.navbar-link-special.active {
+  background: linear-gradient(135deg, #d97706 0%, #dc2626 100%);
+}
+
+.navbar-cta {
+  margin-left: 8px;
+}
+
+.navbar-whatsapp {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  background: #25D366;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.navbar-whatsapp:hover {
+  background: #20ba5a;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+}
+
+/* Responsive - Mobile */
+@media (max-width: 968px) {
+  .navbar-toggle {
+    display: flex;
+  }
+
+  .navbar-menu {
+    position: fixed;
+    left: -100%;
+    top: 70px;
+    flex-direction: column;
+    background-color: #ffffff;
+    width: 100%;
+    text-align: left;
+    transition: left 0.3s ease;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    max-height: calc(100vh - 70px);
+    overflow-y: auto;
+    padding: 20px 0;
+    gap: 0;
+  }
+
+  .navbar-menu.active {
+    left: 0;
+  }
+
+  .navbar-menu li {
+    width: 100%;
+  }
+
+  .navbar-link {
+    width: 100%;
+    padding: 16px 20px;
+    border-radius: 0;
+    font-size: 1.05rem;
+    border-bottom: 1px solid #f1f5f9;
+  }
+
+  .navbar-link:hover {
+    background: #f8fafc;
+    padding-left: 30px;
+  }
+
+  .navbar-link.active {
+    background: #f0fdf4;
+    border-left: 4px solid #16a34a;
+    padding-left: 26px;
+  }
+
+  .navbar-link-special {
+    margin: 8px 20px;
+    width: calc(100% - 40px);
+    text-align: center;
+    border-radius: 8px;
+    border-bottom: none;
+  }
+
+  .navbar-cta {
+    margin: 8px 0 0 0;
+    padding: 0 20px;
+  }
+
+  .navbar-whatsapp {
+    width: 100%;
+    justify-content: center;
+    padding: 16px 18px;
+    font-size: 1.05rem;
+  }
+}
+
+/* Tablet */
+@media (max-width: 1100px) and (min-width: 969px) {
+  .navbar-container {
+    padding: 0 20px;
+  }
+
+  .navbar-menu {
+    gap: 4px;
+  }
+
+  .navbar-link {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+  }
+
+  .navbar-whatsapp {
+    padding: 8px 14px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Prevenir scroll horizontal cuando el menu está abierto en mobile */
+body.menu-open {
+  overflow: hidden;
+}
