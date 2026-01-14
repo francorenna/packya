@@ -33,7 +33,15 @@ import bolsas7 from '../assets/bolsas7.jpg'
 import bolsas8 from '../assets/bolsas8.png'
 
 import vino0 from '../assets/vino0.png'
-import vino1 from '../assets/vino1.jpeg'
+import vino1 from '../assets/vino1.png'
+import vino2 from '../assets/vino2.jpg'
+import vino3 from '../assets/vino3.jpg'
+import vino4 from '../assets/vino4.png'
+
+import cajacaja0 from '../assets/cajacaja0.jpg'
+import cajacaja1 from '../assets/cajacaja1.jpg'
+import cajacaja2 from '../assets/cajacaja2.jpg'
+import cajacaja3 from '../assets/cajacaja3.jpg'
 
 import pcb from '../assets/pcb.png'
 import pcm from '../assets/pcm.png'
@@ -52,7 +60,11 @@ export default function Home() {
 
   const [expandedV, setExpandedV] = useState(false)
   const [mainIndexV, setMainIndexV] = useState(0)
-  const wines = [vino0, vino1]
+  const wines = [vino0, vino1, vino2, vino3, vino4]
+
+  const [expandedE, setExpandedE] = useState(false)
+  const [mainIndexE, setMainIndexE] = useState(0)
+  const packaging = [cajacaja0, cajacaja1, cajacaja2, cajacaja3]
 
   // Carrusel automático para cajas
   useEffect(() => {
@@ -77,6 +89,14 @@ export default function Home() {
     }, 3000)
     return () => clearInterval(intervalo)
   }, [wines.length])
+
+  // Carrusel automático para cajas de embalaje
+  useEffect(() => {
+    const intervalo = setInterval(() => {
+      setMainIndexE((prev) => (prev + 1) % packaging.length)
+    }, 3000)
+    return () => clearInterval(intervalo)
+  }, [packaging.length])
 
   return (
     <div className="home-root">
@@ -172,6 +192,52 @@ export default function Home() {
           </div>
         </div>
       </header>
+
+      {/* Floating social links - círculos animados */}
+      <section className="social-floating" aria-label="Seguinos en redes">
+        <div className="container">
+          <p className="social-floating-text">Seguinos en nuestras redes</p>
+          <div className="social-floating-icons">
+            <a
+              className="social-circle instagram-circle"
+              href="https://www.instagram.com/packyacajasybolsas"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Instagram"
+            >
+              <svg className="social-circle-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" strokeWidth="2" fill="none" />
+                <circle cx="12" cy="12" r="3" stroke="currentColor" strokeWidth="2" fill="none" />
+                <circle cx="17" cy="7" r="1" fill="currentColor" />
+              </svg>
+            </a>
+
+            <a
+              className="social-circle facebook-circle"
+              href="https://www.facebook.com/packyacajasybolsas"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Facebook"
+            >
+              <svg className="social-circle-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+              </svg>
+            </a>
+
+            <a
+              className="social-circle tiktok-circle"
+              href="https://www.tiktok.com/@packyacajasybolsas"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="TikTok"
+            >
+              <svg className="social-circle-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </section>
 
       {/* Banners clickeables para contacto por WhatsApp */}
       <section className="contact-banners">
@@ -318,6 +384,49 @@ export default function Home() {
                   onClick={() => {
                     setMainIndexV(i + 1)
                     setExpandedV(true)
+                  }}
+                />
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Cajas de Embalaje showcase */}
+      <section className="product-showcase">
+        <div className="container">
+          <h2 className="showcase-title showcase-hero">Cajas de Embalaje Personalizadas</h2>
+          <p className="showcase-desc">Packaging profesional para e-commerce, envíos y productos. Ideal para emprendimientos y tiendas online.</p>
+
+          <div
+            className={`showcase-gallery ${expandedE ? 'is-expanded' : ''}`}
+            onMouseEnter={() => setExpandedE(true)}
+            onMouseLeave={() => setExpandedE(false)}
+          >
+            <div
+              className="showcase-main"
+              onClick={() => setExpandedE((s) => !s)}
+              role="button"
+              tabIndex={0}
+              onKeyDown={(e) => e.key === 'Enter' && setExpandedE((s) => !s)}
+            >
+              <img
+                src={packaging[mainIndexE]}
+                alt={`Cajas de Embalaje ${mainIndexE + 1}`}
+                className="showcase-main-img is-embalaje"
+              />
+            </div>
+
+            <div className="showcase-thumbs" aria-hidden={!expandedE}>
+              {packaging.slice(1).map((src, i) => (
+                <img
+                  key={i}
+                  src={src}
+                  alt={`Cajas de Embalaje ${i + 2}`}
+                  className="thumb thumb-embalaje"
+                  onClick={() => {
+                    setMainIndexE(i + 1)
+                    setExpandedE(true)
                   }}
                 />
               ))}
@@ -651,6 +760,7 @@ export default function Home() {
           <Link to="/cajas-de-pizza">Cajas de Pizza</Link>
           <Link to="/bolsas-kraft">Bolsas Kraft</Link>
           <Link to="/cajas-de-vino">Cajas de Vino</Link>
+          <Link to="/cajas-de-embalaje">Cajas de Embalaje</Link>
           <Link to="/">Inicio</Link>
           <a href="https://wa.me/5492614177745" target="_blank" rel="noreferrer">
             WhatsApp

@@ -2,9 +2,12 @@ import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import vino0 from "../assets/vino0.png";
-import vino1 from "../assets/vino1.jpeg";
+import vino1 from "../assets/vino1.png";
+import vino2 from "../assets/vino2.jpg";
+import vino3 from "../assets/vino3.jpg";
+import vino4 from "../assets/vino4.png";
 
-const imagenesVino = [vino0, vino1];
+const imagenesVino = [vino0, vino1, vino2, vino3, vino4];
 
 export default function CajasVino() {
   const [imagenActual, setImagenActual] = useState(0);
