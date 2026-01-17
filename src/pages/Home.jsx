@@ -43,8 +43,7 @@ import cajacaja1 from '../assets/cajacaja1.jpg'
 import cajacaja2 from '../assets/cajacaja2.jpg'
 import cajacaja3 from '../assets/cajacaja3.jpg'
 
-import pcb from '../assets/pcb.png'
-import pcm from '../assets/pcm.png'
+import pcfinal from '../assets/pcfinal.png'
 
 export default function Home() {
   const [expanded, setExpanded] = useState(false)
@@ -109,79 +108,93 @@ export default function Home() {
         <div className="hero-background"></div>
         <div className="hero-content">
           <div className="hero-text">
-            <h1 className="hero-title">
-              Cajas y bolsas personalizadas para tu marca
-              <span className="hero-subtitle-title">Fabricación directa – sin intermediarios</span>
+            <h1 className="hero-title hero-title-special">
+              PACKAGING PARA <span className="highlight-delivery">DELIVERY</span>
             </h1>
             <p className="hero-subtitle">
-              Producción propia desde 50 unidades · Entrega rápida · Envíos a todo el país
+              Personalizá tus cajas y bolsas con tu marca
             </p>
             
-            <p className="hero-urgency">
-              <svg className="clock-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <circle cx="12" cy="12" r="10"></circle>
-                <polyline points="12 6 12 12 16 14"></polyline>
-              </svg>
-              Producción en 24–48 hs | Desde 50 unidades
+            {/* Micro-copy clave */}
+            <p className="hero-microcopy">
+              ✔ Entregas rápidas · ✔ Desde 1 unidad · ✔ Mayorista por cantidad
             </p>
             
-            <ul className="hero-features">
-              <li>
-                <svg className="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3">
-                  <polyline points="20 6 9 17 4 12"></polyline>
-                </svg>
-                <span>Impresión profesional</span>
-              </li>
-              <li>
-                <svg className="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3">
-                  <polyline points="20 6 9 17 4 12"></polyline>
-                </svg>
-                <span>Atención directa por WhatsApp</span>
-              </li>
-              <li>
-                <svg className="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3">
-                  <polyline points="20 6 9 17 4 12"></polyline>
-                </svg>
-                <span>Producción propia</span>
-              </li>
-            </ul>
+            {/* Íconos de identificación rápida */}
+            <div className="hero-quick-icons">
+              <div className="quick-icon">
+                <span className="icon-emoji">🍕</span>
+              </div>
+              <div className="quick-icon">
+                <span className="icon-emoji">🛍️</span>
+              </div>
+              <div className="quick-icon">
+                <span className="icon-emoji">📦</span>
+              </div>
+            </div>
+            
+            {/* Sección de diferenciales con 4 íconos */}
+            <div className="hero-differentials">
+              <div className="differential-item">
+                <div className="differential-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
+                </div>
+                <span>Entregas en 24/48 hs</span>
+              </div>
+              <div className="differential-item">
+                <div className="differential-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                    <line x1="12" y1="8" x2="12" y2="16"></line>
+                    <line x1="8" y1="12" x2="16" y2="12"></line>
+                  </svg>
+                </div>
+                <span>Desde 1 unidad para muestras</span>
+              </div>
+              <div className="differential-item">
+                <div className="differential-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <line x1="12" y1="1" x2="12" y2="23"></line>
+                    <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                  </svg>
+                </div>
+                <span>Precio mayorista por cantidad</span>
+              </div>
+              <div className="differential-item">
+                <div className="differential-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M12 19l7-7 3 3-7 7-3-3z"></path>
+                    <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path>
+                    <path d="M2 2l7.586 7.586"></path>
+                    <circle cx="11" cy="11" r="2"></circle>
+                  </svg>
+                </div>
+                <span>Impresión personalizada</span>
+              </div>
+            </div>
 
             <div className="hero-actions">
-              <div className="primary-action-group">
-                <a
-                  className="btn-whatsapp"
-                  href="https://wa.me/5492614177745"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <svg className="whatsapp-icon" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-                  </svg>
-                  Cotizar ahora por WhatsApp
-                </a>
-                <span className="btn-note">Sin compromiso · Respondemos rápido</span>
-              </div>
-              
-              <a className="btn-secondary" href="#product-showcase">
-                Ver trabajos y precios
+              <a
+                className="btn-whatsapp-main"
+                href="https://wa.me/5492614177745?text=Hola%20Packya!%20Quiero%20lista%20de%20precios%20para%20mi%20negocio."
+                target="_blank"
+                rel="noreferrer"
+              >
+                <svg className="whatsapp-icon" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                </svg>
+                <div className="btn-whatsapp-content">
+                  <span className="btn-whatsapp-text">PEDIR LISTA POR WHATSAPP</span>
+                  <span className="btn-whatsapp-phone">📞 261 4177745</span>
+                </div>
               </a>
             </div>
 
-            <Link to="/simulador" className="btn-simulator">
-              <div className="btn-simulator-content">
-                <span className="simulator-emoji">🧪</span>
-                <div className="simulator-text">
-                  <span className="simulator-title">Probá tu logo en una caja</span>
-                  <span className="simulator-subtitle">Mirá cómo queda tu marca antes de comprar</span>
-                </div>
-              </div>
-            </Link>
-            
             <p className="hero-trust">
-              <svg className="star-icon" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-              </svg>
-              Más de 1.000 cajas producidas para marcas de Mendoza
+              ✔ Entrega rápida en Mendoza y envíos a todo el país
             </p>
           </div>
           
@@ -239,35 +252,27 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Banners clickeables para contacto por WhatsApp */}
+      {/* Banner clickeable para contacto por WhatsApp */}
       <section className="contact-banners">
         <div className="container">
           <div className="banners-grid">
             <a
-              href="https://wa.me/5492614177745"
+              href="https://wa.me/5492614177745?text=Hola%20Packya!%20Quiero%20lista%20de%20precios%20para%20mi%20negocio."
               target="_blank"
               rel="noreferrer"
               className="banner-link"
             >
-              <img src={pcb} alt="Banner PCB - Contactar por WhatsApp" className="banner-image" />
-            </a>
-            <a
-              href="https://wa.me/5492614177745"
-              target="_blank"
-              rel="noreferrer"
-              className="banner-link"
-            >
-              <img src={pcm} alt="Banner PCM - Contactar por WhatsApp" className="banner-image" />
+              <img src={pcfinal} alt="Banner - Contactar por WhatsApp" className="banner-image" />
             </a>
           </div>
         </div>
       </section>
 
-      {/* New showcase section under banner */}
+      {/* New showcase section under banner - Prioridad 1: Gastronomía y delivery */}
       <section id="product-showcase" className="product-showcase">
         <div className="container">
-          <h2 className="showcase-title showcase-hero">Cajas de Pizza Personalizadas</h2>
-          <p className="showcase-desc">Impresión full color en cartón corrugado. Desde 20 unidades. Ideal para pizzerías y delivery.</p>
+          <h2 className="showcase-title showcase-hero">Cajas de Pizza para Delivery</h2>
+          <p className="showcase-desc">Ideal para pizzerías, restaurantes y comercios gastronómicos. Impresión profesional que destaca tu marca en cada entrega.</p>
 
           <div
             className={`showcase-gallery ${expanded ? 'is-expanded' : ''}`}
@@ -306,11 +311,11 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Bolsas showcase, same layout/behavior as Cajas */}
+      {/* Prioridad 2: Bolsas kraft */}
       <section className="product-showcase">
         <div className="container">
-          <h2 className="showcase-title showcase-hero">Bolsas Personalizadas</h2>
-          <p className="showcase-desc">Bolsas kraft, papel madera y más. Impresión digital de alta calidad. Perfectas para tiendas y emprendimientos.</p>
+          <h2 className="showcase-title showcase-hero">Bolsas Kraft Personalizadas</h2>
+          <p className="showcase-desc">Ideales para delivery gastronómico, comercios y emprendimientos. Impresión digital de alta calidad que refleja tu identidad.</p>
 
           <div
             className={`showcase-gallery ${expandedB ? 'is-expanded' : ''}`}
@@ -349,11 +354,11 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Cajas de Vino showcase */}
+      {/* Prioridad 3: Cajas de Vino */}
       <section className="product-showcase">
         <div className="container">
           <h2 className="showcase-title showcase-wine">Cajas para Vinos y Botellas</h2>
-          <p className="showcase-desc">Packaging premium para bodegas y vinotecas. Diseños personalizados que destacan tu marca.</p>
+          <p className="showcase-desc">Packaging premium para bodegas, vinotecas y regalos corporativos. Tu marca en cada detalle.</p>
 
           <div
             className={`showcase-gallery ${expandedV ? 'is-expanded' : ''}`}
@@ -392,11 +397,11 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Cajas de Embalaje showcase */}
+      {/* Prioridad 4: Embalaje general */}
       <section className="product-showcase">
         <div className="container">
-          <h2 className="showcase-title showcase-hero">Cajas de Embalaje Personalizadas</h2>
-          <p className="showcase-desc">Packaging profesional para e-commerce, envíos y productos. Ideal para emprendimientos y tiendas online.</p>
+          <h2 className="showcase-title showcase-hero">Cajas de Embalaje para E-commerce</h2>
+          <p className="showcase-desc">Packaging profesional para envíos y productos. Ideal para tiendas online y emprendimientos que buscan diferenciarse.</p>
 
           <div
             className={`showcase-gallery ${expandedE ? 'is-expanded' : ''}`}
@@ -767,6 +772,20 @@ export default function Home() {
           </a>
         </div>
       </footer>
+
+      {/* Botón flotante de WhatsApp */}
+      <a
+        href="https://wa.me/5492614177745?text=Hola%20Packya!%20Quiero%20lista%20de%20precios%20para%20mi%20negocio."
+        target="_blank"
+        rel="noreferrer"
+        className="whatsapp-float"
+        aria-label="Contactar por WhatsApp"
+      >
+        <svg className="whatsapp-float-icon" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+        <span className="whatsapp-float-tooltip">Consultá ahora</span>
+      </a>
     </div>
   )
 }
