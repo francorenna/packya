@@ -4,6 +4,8 @@ import { Helmet } from 'react-helmet'
 import '../styles/simulador.css'
 import cajablanca from '../assets/cajablanca.png'
 import cajamarron from '../assets/cajamarron.png'
+import bolsablanca from '../assets/bolsasblanca.png'
+import bolsamarron from '../assets/bolsasmarron.png'
 
 export default function Simulador() {
   const [logo, setLogo] = useState(null)
@@ -16,7 +18,11 @@ export default function Simulador() {
   const canvasRef = useRef(null)
   const containerRef = useRef(null)
 
-  const currentBox = boxType === 'blanca' ? cajablanca : cajamarron
+  const currentBox = 
+    boxType === 'blanca' ? cajablanca :
+    boxType === 'marron' ? cajamarron :
+    boxType === 'bolsablanca' ? bolsablanca :
+    bolsamarron
 
   const handleFileUpload = (e) => {
     const file = e.target.files[0]
@@ -146,6 +152,18 @@ export default function Simulador() {
                 onClick={() => setBoxType('marron')}
               >
                 Caja Marrón
+              </button>
+              <button
+                className={`box-selector-btn ${boxType === 'bolsablanca' ? 'active' : ''}`}
+                onClick={() => setBoxType('bolsablanca')}
+              >
+                Bolsa Blanca
+              </button>
+              <button
+                className={`box-selector-btn ${boxType === 'bolsamarron' ? 'active' : ''}`}
+                onClick={() => setBoxType('bolsamarron')}
+              >
+                Bolsa Kraft
               </button>
             </div>
 
