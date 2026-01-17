@@ -109,10 +109,12 @@ export default function Home() {
         <div className="hero-content">
           <div className="hero-text">
             <h1 className="hero-title hero-title-special">
-              PACKAGING PARA <span className="highlight-delivery">DELIVERY</span>
+              CAJAS Y BOLSAS IMPRESAS
+              <br />
+              <span className="highlight-delivery">FULL COLOR</span>
             </h1>
             <p className="hero-subtitle">
-              Personalizá tus cajas y bolsas con tu marca
+              Packaging con tu marca, listo para vender desde el primer día.
             </p>
             
             {/* Micro-copy clave */}
