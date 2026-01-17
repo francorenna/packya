@@ -252,6 +252,148 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Sección de Testimonios */}
+      <section className="testimonials-section">
+        <div className="container">
+          <h2 className="testimonials-title">¿Qué dicen nuestros clientes?</h2>
+          <p className="testimonials-subtitle">Más de 200 negocios confían en PACKYA para su packaging</p>
+          
+          <div className="testimonials-grid">
+            {/* Testimonio 1 - Rapidez */}
+            <div className="testimonial-card">
+              <div className="testimonial-header">
+                <div className="testimonial-avatar testimonial-avatar-1">M</div>
+                <div className="testimonial-info">
+                  <h3 className="testimonial-name">Martín González</h3>
+                  <p className="testimonial-business">Pizzería Don Mario - Godoy Cruz</p>
+                </div>
+              </div>
+              <div className="testimonial-stars">
+                {[...Array(5)].map((_, i) => (
+                  <svg key={i} className="star-icon-testimonial" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                  </svg>
+                ))}
+              </div>
+              <p className="testimonial-text">
+                "¡Increíble! Necesitaba cajas urgente para el fin de semana y en 48 horas las tenía en la pizzería. 
+                La calidad es excelente y mis clientes ahora reconocen mi marca al toque. Super recomendable."
+              </p>
+            </div>
+
+            {/* Testimonio 2 - Calidad */}
+            <div className="testimonial-card">
+              <div className="testimonial-header">
+                <div className="testimonial-avatar testimonial-avatar-2">C</div>
+                <div className="testimonial-info">
+                  <h3 className="testimonial-name">Carolina Suárez</h3>
+                  <p className="testimonial-business">Empanadas del Valle - Luján</p>
+                </div>
+              </div>
+              <div className="testimonial-stars">
+                {[...Array(5)].map((_, i) => (
+                  <svg key={i} className="star-icon-testimonial" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                  </svg>
+                ))}
+              </div>
+              <p className="testimonial-text">
+                "El cartón es de primera calidad, mucho más resistente que otros proveedores. 
+                Mis empanadas llegan perfectas y la impresión se ve profesional. ¡Me encantó trabajar con ustedes!"
+              </p>
+            </div>
+
+            {/* Testimonio 3 - Atención */}
+            <div className="testimonial-card">
+              <div className="testimonial-header">
+                <div className="testimonial-avatar testimonial-avatar-3">R</div>
+                <div className="testimonial-info">
+                  <h3 className="testimonial-name">Roberto Fernández</h3>
+                  <p className="testimonial-business">Burguer Street - Maipú</p>
+                </div>
+              </div>
+              <div className="testimonial-stars">
+                {[...Array(5)].map((_, i) => (
+                  <svg key={i} className="star-icon-testimonial" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                  </svg>
+                ))}
+              </div>
+              <p className="testimonial-text">
+                "La atención por WhatsApp es inmediata. Me ayudaron con el diseño, me mandaron muestras 
+                y siempre respondieron todas mis dudas. Son un equipo de 10, se nota que les importa el cliente."
+              </p>
+            </div>
+
+            {/* Testimonio 4 - Personalización */}
+            <div className="testimonial-card">
+              <div className="testimonial-header">
+                <div className="testimonial-avatar testimonial-avatar-4">L</div>
+                <div className="testimonial-info">
+                  <h3 className="testimonial-name">Lucía Morales</h3>
+                  <p className="testimonial-business">Pasteleria Delicia - Capital</p>
+                </div>
+              </div>
+              <div className="testimonial-stars">
+                {[...Array(5)].map((_, i) => (
+                  <svg key={i} className="star-icon-testimonial" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                  </svg>
+                ))}
+              </div>
+              <p className="testimonial-text">
+                "Pedí cajas personalizadas para mi pasteleria y quedaron HERMOSAS. La impresión a full color 
+                hace que mis tortas se vean aún más especiales. Mis clientas están fascinadas con el packaging."
+              </p>
+            </div>
+
+            {/* Testimonio 5 - Precio y cantidad */}
+            <div className="testimonial-card">
+              <div className="testimonial-header">
+                <div className="testimonial-avatar testimonial-avatar-5">D</div>
+                <div className="testimonial-info">
+                  <h3 className="testimonial-name">Diego Ramírez</h3>
+                  <p className="testimonial-business">Rotiseria El Buen Sabor - Las Heras</p>
+                </div>
+              </div>
+              <div className="testimonial-stars">
+                {[...Array(5)].map((_, i) => (
+                  <svg key={i} className="star-icon-testimonial" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                  </svg>
+                ))}
+              </div>
+              <p className="testimonial-text">
+                "Arranqué con 50 cajas para probar y después pedí 500. El precio mayorista es increíble y 
+                no tengo que comprar miles como me pedían en otros lados. Justo lo que necesitaba para mi rotisería."
+              </p>
+            </div>
+
+            {/* Testimonio 6 - Confianza y recomendación */}
+            <div className="testimonial-card">
+              <div className="testimonial-header">
+                <div className="testimonial-avatar testimonial-avatar-6">A</div>
+                <div className="testimonial-info">
+                  <h3 className="testimonial-name">Andrea Paz</h3>
+                  <p className="testimonial-business">Sushi Zen - Chacras de Coria</p>
+                </div>
+              </div>
+              <div className="testimonial-stars">
+                {[...Array(5)].map((_, i) => (
+                  <svg key={i} className="star-icon-testimonial" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                  </svg>
+                ))}
+              </div>
+              <p className="testimonial-text">
+                "Ya es la tercera vez que pido y siempre impecable. Las cajas para sushi son hermosas, 
+                llegan perfectas y mis clientes me felicitan por la presentación. Ya los recomendé a varios colegas. ¡Gracias PACKYA!"
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Banner clickeable para contacto por WhatsApp */}
       <section className="contact-banners">
         <div className="container">
