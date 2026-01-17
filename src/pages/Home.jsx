@@ -193,6 +193,17 @@ export default function Home() {
                   <span className="btn-whatsapp-phone">📞 261 4177745</span>
                 </div>
               </a>
+              
+              <Link to="/simulador" className="btn-simulator-main">
+                <svg className="simulator-icon" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                  <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14z" opacity=".3"/>
+                </svg>
+                <div className="btn-simulator-content-main">
+                  <span className="btn-simulator-text">SIMULADOR DE CAJAS Y BOLSAS</span>
+                  <span className="btn-simulator-subtitle">Probá tu logo y mirá cómo queda</span>
+                </div>
+              </Link>
             </div>
 
             <p className="hero-trust">
