@@ -100,7 +100,14 @@ export default function Home() {
   return (
     <div className="home-root">
       <Helmet>
+        <title>PACKYA – Cajas y Bolsas Personalizadas | Mendoza</title>
+        <meta name="description" content="Fabricamos cajas y bolsas personalizadas desde 50 unidades. Producción rápida en Mendoza y envíos a todo el país. Impresión profesional para tu marca." />
+        <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://packya.com.ar/" />
+        <meta property="og:title" content="PACKYA – Cajas y Bolsas Personalizadas | Mendoza" />
+        <meta property="og:description" content="Fabricamos cajas y bolsas personalizadas desde 50 unidades. Producción rápida en Mendoza y envíos a todo el país." />
+        <meta property="og:url" content="https://packya.com.ar/" />
+        <meta property="og:type" content="website" />
       </Helmet>
       {/* Removed construction badge as requested */}
 

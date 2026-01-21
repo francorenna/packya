@@ -27,7 +27,12 @@ export default function CajasEmbalaje() {
           name="description"
           content="Cajas de embalaje impresas full color para e-commerce, envíos y productos. Producción desde 20 unidades con impresión digital en Mendoza."
         />
+        <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://packya.com.ar/cajas-de-embalaje" />
+        <meta property="og:title" content="Cajas de Embalaje Personalizadas en Mendoza | PACKYA" />
+        <meta property="og:description" content="Cajas de embalaje impresas full color para e-commerce, envíos y productos. Producción desde 20 unidades con impresión digital en Mendoza." />
+        <meta property="og:url" content="https://packya.com.ar/cajas-de-embalaje" />
+        <meta property="og:type" content="website" />
       </Helmet>
 
       <section className="seo-section">
