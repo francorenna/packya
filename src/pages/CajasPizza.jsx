@@ -17,10 +17,29 @@ import cajas12 from "../assets/cajas12.png";
 import cajas13 from "../assets/cajas13.jpg";
 import cajas14 from "../assets/cajas14.jpg";
 import cajas15 from "../assets/cajas15.jpg";
+import nuevaCaja0 from "../assets/Nuevas/Sin título-1_Mesa de trabajo 1 copia.jpg";
+import nuevaCaja1 from "../assets/Nuevas/Sin título-1_Mesa de trabajo 1.jpg";
+import nuevaCaja2 from "../assets/Nuevas/Tito.png";
+import nuevaCaja3 from "../assets/Nuevas/amichipizza.png";
+import nuevaCaja4 from "../assets/Nuevas/amichipizza3.png";
+import nuevaCaja5 from "../assets/Nuevas/b0d63d0e-f7e1-4e54-9886-3a4ca461b619.png";
+import nuevaCaja6 from "../assets/Nuevas/fugazza.png";
+import nuevaCaja7 from "../assets/Nuevas/fugazza2.png";
+import nuevaCaja8 from "../assets/Nuevas/fugazza3.png";
+import nuevaCaja9 from "../assets/Nuevas/ilnono.png";
+import nuevaCaja10 from "../assets/Nuevas/lalolita.png";
+import nuevaCaja11 from "../assets/Nuevas/lomomania_Mesa de trabajo 1 copia.jpg";
+import nuevaCaja12 from "../assets/Nuevas/lomomania_Mesa de trabajo 1.jpg";
+import nuevaCaja13 from "../assets/Nuevas/matilde.png";
+import nuevaCaja14 from "../assets/Nuevas/pizzaya.png";
+import nuevaCaja15 from "../assets/Nuevas/yogui.png";
 
 const imagenesCajas = [
   cajas0, cajas1, cajas2, cajas3, cajas4, cajas5, cajas6, cajas7, 
-  cajas8, cajas9, cajas10, cajas11, cajas12, cajas13, cajas14, cajas15
+  cajas8, cajas9, cajas10, cajas11, cajas12, cajas13, cajas14, cajas15,
+  nuevaCaja0, nuevaCaja1, nuevaCaja2, nuevaCaja3, nuevaCaja4, nuevaCaja5,
+  nuevaCaja6, nuevaCaja7, nuevaCaja8, nuevaCaja9, nuevaCaja10, nuevaCaja11,
+  nuevaCaja12, nuevaCaja13, nuevaCaja14, nuevaCaja15
 ];
 
 export default function CajasPizza() {
