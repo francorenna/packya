@@ -6,8 +6,10 @@ import vino1 from "../assets/vino1.png";
 import vino2 from "../assets/vino2.jpg";
 import vino3 from "../assets/vino3.jpg";
 import vino4 from "../assets/vino4.png";
+import masVino0 from "../assets/Nuevas/masvino/instagram caja vino.png";
+import masVino1 from "../assets/Nuevas/masvino/instagram caja vino2.png";
 
-const imagenesVino = [vino0, vino1, vino2, vino3, vino4];
+const imagenesVino = [vino0, vino1, vino2, vino3, vino4, masVino0, masVino1];
 
 export default function CajasVino() {
   const [imagenActual, setImagenActual] = useState(0);
@@ -45,6 +47,9 @@ export default function CajasVino() {
           <img
             src={imagenesVino[imagenActual]}
             alt={`Caja de vino personalizada ${imagenActual + 1}`}
+            loading="eager"
+            decoding="async"
+            fetchPriority="high"
             style={{
               maxWidth: '100%',
               maxHeight: '500px',

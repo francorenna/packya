@@ -33,13 +33,26 @@ import nuevaCaja12 from "../assets/Nuevas/lomomania_Mesa de trabajo 1.jpg";
 import nuevaCaja13 from "../assets/Nuevas/matilde.png";
 import nuevaCaja14 from "../assets/Nuevas/pizzaya.png";
 import nuevaCaja15 from "../assets/Nuevas/yogui.png";
+import masCaja0 from "../assets/Nuevas/Mascajas/LomitoClub.png";
+import masCaja1 from "../assets/Nuevas/Mascajas/SrPizza.png";
+import masCaja2 from "../assets/Nuevas/Mascajas/SrPizza2.png";
+import masCaja3 from "../assets/Nuevas/Mascajas/autenticosabor.png";
+import masCaja4 from "../assets/Nuevas/Mascajas/bravos.png";
+import masCaja5 from "../assets/Nuevas/Mascajas/croma.png";
+import masCaja6 from "../assets/Nuevas/Mascajas/d30dca73-49cc-4ac7-9e81-32e57e35c53a.png";
+import masCaja7 from "../assets/Nuevas/Mascajas/laporteñita.png";
+import masCaja8 from "../assets/Nuevas/Mascajas/pastas.png";
+import masCaja9 from "../assets/Nuevas/Mascajas/pietros.png";
+import masCaja10 from "../assets/Nuevas/Mascajas/taglio.png";
 
 const imagenesCajas = [
   cajas0, cajas1, cajas2, cajas3, cajas4, cajas5, cajas6, cajas7, 
   cajas8, cajas9, cajas10, cajas11, cajas12, cajas13, cajas14, cajas15,
   nuevaCaja0, nuevaCaja1, nuevaCaja2, nuevaCaja3, nuevaCaja4, nuevaCaja5,
   nuevaCaja6, nuevaCaja7, nuevaCaja8, nuevaCaja9, nuevaCaja10, nuevaCaja11,
-  nuevaCaja12, nuevaCaja13, nuevaCaja14, nuevaCaja15
+  nuevaCaja12, nuevaCaja13, nuevaCaja14, nuevaCaja15,
+  masCaja0, masCaja1, masCaja2, masCaja3, masCaja4, masCaja5,
+  masCaja6, masCaja7, masCaja8, masCaja9, masCaja10
 ];
 
 export default function CajasPizza() {
@@ -78,6 +91,9 @@ export default function CajasPizza() {
           <img
             src={imagenesCajas[imagenActual]}
             alt={`Caja de pizza personalizada ${imagenActual + 1}`}
+            loading="eager"
+            decoding="async"
+            fetchPriority="high"
             style={{
               maxWidth: '100%',
               maxHeight: '500px',

@@ -5,8 +5,14 @@ import cajacaja0 from "../assets/cajacaja0.jpg";
 import cajacaja1 from "../assets/cajacaja1.jpg";
 import cajacaja2 from "../assets/cajacaja2.jpg";
 import cajacaja3 from "../assets/cajacaja3.jpg";
+import masEmbalaje0 from "../assets/Nuevas/Masembalaje/Caja 20x19x19 Insta.png";
+import masEmbalaje1 from "../assets/Nuevas/Masembalaje/Caja 30x25x20 Insta.png";
+import masEmbalaje2 from "../assets/Nuevas/Masembalaje/Caja20x19x19.png";
 
-const imagenesEmbalaje = [cajacaja0, cajacaja1, cajacaja2, cajacaja3];
+const imagenesEmbalaje = [
+  cajacaja0, cajacaja1, cajacaja2, cajacaja3,
+  masEmbalaje0, masEmbalaje1, masEmbalaje2
+];
 
 export default function CajasEmbalaje() {
   const [imagenActual, setImagenActual] = useState(0);
@@ -44,6 +50,9 @@ export default function CajasEmbalaje() {
           <img
             src={imagenesEmbalaje[imagenActual]}
             alt={`Caja de embalaje personalizada ${imagenActual + 1}`}
+            loading="eager"
+            decoding="async"
+            fetchPriority="high"
             style={{
               maxWidth: '100%',
               maxHeight: '500px',

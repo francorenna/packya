@@ -1,4 +1,3 @@
-// ...existing code...
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet'
@@ -20,6 +19,17 @@ import cajas12 from '../assets/Nuevas/lomomania_Mesa de trabajo 1.jpg'
 import cajas13 from '../assets/Nuevas/matilde.png'
 import cajas14 from '../assets/Nuevas/pizzaya.png'
 import cajas15 from '../assets/Nuevas/yogui.png'
+import masCaja0 from '../assets/Nuevas/Mascajas/LomitoClub.png'
+import masCaja1 from '../assets/Nuevas/Mascajas/SrPizza.png'
+import masCaja2 from '../assets/Nuevas/Mascajas/SrPizza2.png'
+import masCaja3 from '../assets/Nuevas/Mascajas/autenticosabor.png'
+import masCaja4 from '../assets/Nuevas/Mascajas/bravos.png'
+import masCaja5 from '../assets/Nuevas/Mascajas/croma.png'
+import masCaja6 from '../assets/Nuevas/Mascajas/d30dca73-49cc-4ac7-9e81-32e57e35c53a.png'
+import masCaja7 from '../assets/Nuevas/Mascajas/laporteñita.png'
+import masCaja8 from '../assets/Nuevas/Mascajas/pastas.png'
+import masCaja9 from '../assets/Nuevas/Mascajas/pietros.png'
+import masCaja10 from '../assets/Nuevas/Mascajas/taglio.png'
 import imagenportada from '../assets/imagenportada.png'
 
 import bolsas0 from '../assets/bolsas0.png'
@@ -31,17 +41,23 @@ import bolsas5 from '../assets/bolsas5.jpeg'
 import bolsas6 from '../assets/bolsas6.png'
 import bolsas7 from '../assets/bolsas7.jpg'
 import bolsas8 from '../assets/bolsas8.png'
+import masBolsa0 from '../assets/Nuevas/Masbolsas/bolsa kraft.png'
 
 import vino0 from '../assets/vino0.png'
 import vino1 from '../assets/vino1.png'
 import vino2 from '../assets/vino2.jpg'
 import vino3 from '../assets/vino3.jpg'
 import vino4 from '../assets/vino4.png'
+import masVino0 from '../assets/Nuevas/masvino/instagram caja vino.png'
+import masVino1 from '../assets/Nuevas/masvino/instagram caja vino2.png'
 
 import cajacaja0 from '../assets/cajacaja0.jpg'
 import cajacaja1 from '../assets/cajacaja1.jpg'
 import cajacaja2 from '../assets/cajacaja2.jpg'
 import cajacaja3 from '../assets/cajacaja3.jpg'
+import masEmbalaje0 from '../assets/Nuevas/Masembalaje/Caja 20x19x19 Insta.png'
+import masEmbalaje1 from '../assets/Nuevas/Masembalaje/Caja 30x25x20 Insta.png'
+import masEmbalaje2 from '../assets/Nuevas/Masembalaje/Caja20x19x19.png'
 
 import pcfinal from '../assets/pcfinal.png'
 
@@ -50,20 +66,25 @@ export default function Home() {
   const [mainIndex, setMainIndex] = useState(0)
   const gallery = [
     cajas0, cajas1, cajas2, cajas3, cajas4, cajas5, cajas6, cajas7,
-    cajas8, cajas9, cajas10, cajas11, cajas12, cajas13, cajas14, cajas15
+    cajas8, cajas9, cajas10, cajas11, cajas12, cajas13, cajas14, cajas15,
+    masCaja0, masCaja1, masCaja2, masCaja3, masCaja4, masCaja5,
+    masCaja6, masCaja7, masCaja8, masCaja9, masCaja10
   ]
 
   const [expandedB, setExpandedB] = useState(false)
   const [mainIndexB, setMainIndexB] = useState(0)
-  const bags = [bolsas0, bolsas1, bolsas2, bolsas3, bolsas4, bolsas5, bolsas6, bolsas7, bolsas8]
+  const bags = [bolsas0, bolsas1, bolsas2, bolsas3, bolsas4, bolsas5, bolsas6, bolsas7, bolsas8, masBolsa0]
 
   const [expandedV, setExpandedV] = useState(false)
   const [mainIndexV, setMainIndexV] = useState(0)
-  const wines = [vino0, vino1, vino2, vino3, vino4]
+  const wines = [vino0, vino1, vino2, vino3, vino4, masVino0, masVino1]
 
   const [expandedE, setExpandedE] = useState(false)
   const [mainIndexE, setMainIndexE] = useState(0)
-  const packaging = [cajacaja0, cajacaja1, cajacaja2, cajacaja3]
+  const packaging = [
+    cajacaja0, cajacaja1, cajacaja2, cajacaja3,
+    masEmbalaje0, masEmbalaje1, masEmbalaje2
+  ]
 
   // Carrusel automático para cajas
   useEffect(() => {
@@ -220,7 +241,13 @@ export default function Home() {
           
           <div className="hero-image">
             <div className="image-frame">
-              <img src={imagenportada} alt="Producción de cajas personalizadas" />
+              <img
+                src={imagenportada}
+                alt="Producción de cajas personalizadas"
+                loading="eager"
+                decoding="async"
+                fetchPriority="high"
+              />
             </div>
           </div>
         </div>
@@ -424,7 +451,13 @@ export default function Home() {
               rel="noreferrer"
               className="banner-link"
             >
-              <img src={pcfinal} alt="Banner - Contactar por WhatsApp" className="banner-image" />
+              <img
+                src={pcfinal}
+                alt="Banner - Contactar por WhatsApp"
+                className="banner-image"
+                loading="lazy"
+                decoding="async"
+              />
             </a>
           </div>
         </div>
@@ -452,6 +485,8 @@ export default function Home() {
                 src={gallery[mainIndex]}
                 alt={`Cajas ${mainIndex + 1}`}
                 className={`showcase-main-img ${mainIndex === 0 ? 'is-priority' : ''}`}
+                loading="lazy"
+                decoding="async"
               />
             </div>
 
@@ -462,6 +497,8 @@ export default function Home() {
                   src={src}
                   alt={`Cajas ${i + 2}`}
                   className="thumb"
+                  loading="lazy"
+                  decoding="async"
                   onClick={() => {
                     setMainIndex(i + 1)
                     setExpanded(true)
@@ -495,6 +532,8 @@ export default function Home() {
                 src={bags[mainIndexB]}
                 alt={`Bolsas ${mainIndexB + 1}`}
                 className={`showcase-main-img ${mainIndexB === 0 ? 'is-priority' : ''}`}
+                loading="lazy"
+                decoding="async"
               />
             </div>
 
@@ -505,6 +544,8 @@ export default function Home() {
                   src={src}
                   alt={`Bolsas ${i + 2}`}
                   className="thumb"
+                  loading="lazy"
+                  decoding="async"
                   onClick={() => {
                     setMainIndexB(i + 1)
                     setExpandedB(true)
@@ -538,6 +579,8 @@ export default function Home() {
                 src={wines[mainIndexV]}
                 alt={`Cajas de Vino ${mainIndexV + 1}`}
                 className={`showcase-main-img ${mainIndexV === 0 ? 'is-priority' : ''}`}
+                loading="lazy"
+                decoding="async"
               />
             </div>
 
@@ -548,6 +591,8 @@ export default function Home() {
                   src={src}
                   alt={`Cajas de Vino ${i + 2}`}
                   className="thumb"
+                  loading="lazy"
+                  decoding="async"
                   onClick={() => {
                     setMainIndexV(i + 1)
                     setExpandedV(true)
@@ -581,6 +626,8 @@ export default function Home() {
                 src={packaging[mainIndexE]}
                 alt={`Cajas de Embalaje ${mainIndexE + 1}`}
                 className="showcase-main-img is-embalaje"
+                loading="lazy"
+                decoding="async"
               />
             </div>
 
@@ -591,6 +638,8 @@ export default function Home() {
                   src={src}
                   alt={`Cajas de Embalaje ${i + 2}`}
                   className="thumb thumb-embalaje"
+                  loading="lazy"
+                  decoding="async"
                   onClick={() => {
                     setMainIndexE(i + 1)
                     setExpandedE(true)

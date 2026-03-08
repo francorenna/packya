@@ -10,9 +10,11 @@ import bolsas5 from "../assets/bolsas5.jpeg";
 import bolsas6 from "../assets/bolsas6.png";
 import bolsas7 from "../assets/bolsas7.jpg";
 import bolsas8 from "../assets/bolsas8.png";
+import masBolsa0 from "../assets/Nuevas/Masbolsas/bolsa kraft.png";
 
 const imagenesBolsas = [
-  bolsas0, bolsas1, bolsas2, bolsas3, bolsas4, bolsas5, bolsas6, bolsas7, bolsas8
+  bolsas0, bolsas1, bolsas2, bolsas3, bolsas4, bolsas5, bolsas6, bolsas7, bolsas8,
+  masBolsa0
 ];
 
 export default function BolsasKraft() {
@@ -51,6 +53,9 @@ export default function BolsasKraft() {
           <img
             src={imagenesBolsas[imagenActual]}
             alt={`Bolsa kraft personalizada ${imagenActual + 1}`}
+            loading="eager"
+            decoding="async"
+            fetchPriority="high"
             style={{
               maxWidth: '100%',
               maxHeight: '500px',
