@@ -11,31 +11,31 @@ const seoRoutes = [
     path: 'cajas-de-pizza',
     title: 'Cajas de Pizza Personalizadas en Mendoza | PACKYA',
     description: 'Imprimí cajas de pizza personalizadas desde 20 unidades. PACKYA ofrece impresión digital full color, entrega inmediata en Mendoza y envíos a todo el país.',
-    canonical: 'https://packya.com.ar/cajas-de-pizza'
+    canonical: 'https://packya.com.ar/cajas-de-pizza/'
   },
   {
     path: 'bolsas-kraft',
     title: 'Bolsas Kraft Personalizadas en Mendoza | PACKYA',
     description: 'Bolsas kraft impresas a todo color desde 20 unidades. Ideales para comercios, boutiques, ferias y regalos. Impresión digital sin mínimos en Mendoza.',
-    canonical: 'https://packya.com.ar/bolsas-kraft'
+    canonical: 'https://packya.com.ar/bolsas-kraft/'
   },
   {
     path: 'cajas-de-vino',
     title: 'Cajas de Vino Personalizadas en Mendoza | PACKYA',
     description: 'Cajas de vino impresas full color para bodegas, vinotecas y regalos empresariales. Producción desde 20 unidades con impresión digital en Mendoza.',
-    canonical: 'https://packya.com.ar/cajas-de-vino'
+    canonical: 'https://packya.com.ar/cajas-de-vino/'
   },
   {
     path: 'cajas-de-embalaje',
     title: 'Cajas de Embalaje Personalizadas en Mendoza | PACKYA',
     description: 'Cajas de embalaje impresas full color para e-commerce, envíos y productos. Producción desde 20 unidades con impresión digital en Mendoza.',
-    canonical: 'https://packya.com.ar/cajas-de-embalaje'
+    canonical: 'https://packya.com.ar/cajas-de-embalaje/'
   },
   {
     path: 'simulador',
     title: 'Simulador de cajas personalizadas – Probá tu logo | PACKYA',
     description: 'Subí tu logo y mirá cómo queda en una caja personalizada PACKYA. Producción propia desde 50 unidades. Envíos a todo el país.',
-    canonical: 'https://packya.com.ar/simulador'
+    canonical: 'https://packya.com.ar/simulador/'
   }
 ];
 
