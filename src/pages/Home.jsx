@@ -30,7 +30,7 @@ import masCaja7 from '../assets/Nuevas/Mascajas/laporteñita.png'
 import masCaja8 from '../assets/Nuevas/Mascajas/pastas.png'
 import masCaja9 from '../assets/Nuevas/Mascajas/pietros.png'
 import masCaja10 from '../assets/Nuevas/Mascajas/taglio.png'
-import imagenportada from '../assets/imagenportada.png'
+import imagenportada from '../assets/branding/imagenportadanueva.png'
 
 import bolsas0 from '../assets/bolsas0.png'
 import bolsas1 from '../assets/bolsas1.jpeg'
@@ -59,7 +59,7 @@ import masEmbalaje0 from '../assets/Nuevas/Masembalaje/Caja 20x19x19 Insta.png'
 import masEmbalaje1 from '../assets/Nuevas/Masembalaje/Caja 30x25x20 Insta.png'
 import masEmbalaje2 from '../assets/Nuevas/Masembalaje/Caja20x19x19.png'
 
-import pcfinal from '../assets/pcfinal.png'
+import pcfinal from '../assets/branding/bannerpublicitario.png'
 
 export default function Home() {
   const [expanded, setExpanded] = useState(false)
@@ -136,6 +136,7 @@ export default function Home() {
         <div className="hero-background"></div>
         <div className="hero-content">
           <div className="hero-text">
+            <p className="hero-eyebrow">PACKYA | IMPRESION DIGITAL PARA PACKAGING</p>
             <h1 className="hero-title hero-title-special">
               CAJAS Y BOLSAS IMPRESAS
               <br />
@@ -237,6 +238,59 @@ export default function Home() {
             <p className="hero-trust">
               ✔ Entrega rápida en Mendoza y envíos a todo el país
             </p>
+
+            <div className="quote-accelerator" aria-label="Cotizacion express">
+              <p className="quote-accelerator-title">Cotizacion express en 1 click</p>
+              <div className="quote-accelerator-grid">
+                <a
+                  className="quote-chip"
+                  href="https://wa.me/5492614177745?text=Hola%20PACKYA%2C%20quiero%20cotizar%20cajas%20de%20pizza%20personalizadas.%20%C2%BFPueden%20asesorarme%3F"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Pizza
+                </a>
+                <a
+                  className="quote-chip"
+                  href="https://wa.me/5492614177745?text=Hola%20PACKYA%2C%20quiero%20cotizar%20bolsas%20kraft%20personalizadas.%20%C2%BFPueden%20pasarme%20opciones%3F"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Bolsas Kraft
+                </a>
+                <a
+                  className="quote-chip"
+                  href="https://wa.me/5492614177745?text=Hola%20PACKYA%2C%20quiero%20cotizar%20cajas%20de%20vino%20premium.%20%C2%BFPueden%20ayudarme%3F"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Cajas de Vino
+                </a>
+                <a
+                  className="quote-chip"
+                  href="https://wa.me/5492614177745?text=Hola%20PACKYA%2C%20quiero%20cotizar%20cajas%20de%20embalaje%20para%20e-commerce.%20%C2%BFPueden%20asesorarme%3F"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  E-commerce
+                </a>
+              </div>
+            </div>
+
+            <div className="hero-stats" aria-label="Datos clave">
+              <div className="hero-stat-item">
+                <strong>+200</strong>
+                <span>marcas activas</span>
+              </div>
+              <div className="hero-stat-item">
+                <strong>24/48 hs</strong>
+                <span>producción local</span>
+              </div>
+              <div className="hero-stat-item">
+                <strong>Desde 20</strong>
+                <span>unidades</span>
+              </div>
+            </div>
           </div>
           
           <div className="hero-image">
@@ -252,6 +306,34 @@ export default function Home() {
           </div>
         </div>
       </header>
+
+      <section className="home-paths" aria-label="Explorar categorias">
+        <div className="container">
+          <p className="home-paths-intro">Explora rapido segun lo que necesitás</p>
+          <div className="home-paths-grid">
+            <Link to="/cajas-de-pizza" className="home-path-card">
+              <span className="home-path-icon">🍕</span>
+              <span className="home-path-title">Cajas de Pizza</span>
+              <span className="home-path-copy">Delivery gastronomico</span>
+            </Link>
+            <Link to="/bolsas-kraft" className="home-path-card">
+              <span className="home-path-icon">🛍️</span>
+              <span className="home-path-title">Bolsas Kraft</span>
+              <span className="home-path-copy">Comercios y take away</span>
+            </Link>
+            <Link to="/cajas-de-vino" className="home-path-card">
+              <span className="home-path-icon">🍷</span>
+              <span className="home-path-title">Cajas de Vino</span>
+              <span className="home-path-copy">Linea premium</span>
+            </Link>
+            <Link to="/simulador" className="home-path-card home-path-card-featured">
+              <span className="home-path-icon">🧪</span>
+              <span className="home-path-title">Probá tu logo</span>
+              <span className="home-path-copy">Simulador en vivo</span>
+            </Link>
+          </div>
+        </div>
+      </section>
 
       {/* Floating social links - círculos animados */}
       <section className="social-floating" aria-label="Seguinos en redes">
@@ -453,7 +535,7 @@ export default function Home() {
             >
               <img
                 src={pcfinal}
-                alt="Banner - Contactar por WhatsApp"
+                alt="Packya Express - Contactar por WhatsApp"
                 className="banner-image"
                 loading="lazy"
                 decoding="async"

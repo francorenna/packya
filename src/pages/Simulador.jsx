@@ -15,7 +15,6 @@ export default function Simulador() {
   const [isDragging, setIsDragging] = useState(false)
   const [boxType, setBoxType] = useState('blanca')
   const [showMessage, setShowMessage] = useState(false)
-  const canvasRef = useRef(null)
   const containerRef = useRef(null)
 
   const currentBox = 
@@ -35,7 +34,7 @@ export default function Simulador() {
     }
   }
 
-  const handleMouseDown = (e) => {
+  const handleMouseDown = () => {
     if (logo) {
       setIsDragging(true)
     }

@@ -1,6 +1,6 @@
 // ...existing code...
 import { useEffect, useState, useCallback } from 'react'
-import logo from '../assets/logopackya.svg'
+import logo from '../assets/branding/isonegro.png'
 
 export default function Splash({ duration = 2200, onFinish }) {
   const [hiding, setHiding] = useState(false)

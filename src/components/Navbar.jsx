@@ -1,11 +1,16 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import './Navbar.css'
-import logoMenu from '../assets/logomenu.png'
+import logoMenu from '../assets/branding/logo fondo blanco.png'
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
   const location = useLocation()
+
+  useEffect(() => {
+    document.body.classList.toggle('menu-open', isOpen)
+    return () => document.body.classList.remove('menu-open')
+  }, [isOpen])
 
   const closeMenu = () => setIsOpen(false)
 
@@ -80,7 +85,7 @@ export default function Navbar() {
               className={`navbar-link navbar-link-special ${isActive('/simulador') ? 'active' : ''}`}
               onClick={closeMenu}
             >
-              🧪 Simulador
+              Simulador
             </Link>
           </li>
           <li className="navbar-cta">

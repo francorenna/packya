@@ -1,4 +1,21 @@
-/* ...existing code... */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap');
+
+:root {
+  font-family: 'Manrope', sans-serif;
+  color: #13201a;
+  background-color: #f7f8f5;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+}
 
 /* Splash: responsive, safe-area, reduced-motion friendly */
 .splash {
@@ -10,14 +27,40 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #fffaf0 0%, #f6f2e9 100%);
-  -webkit-backdrop-filter: blur(6px);
-  backdrop-filter: blur(6px);
+  background:
+    radial-gradient(circle at 18% 12%, rgba(32, 125, 78, 0.09), transparent 38%),
+    radial-gradient(circle at 82% 18%, rgba(236, 177, 41, 0.1), transparent 32%),
+    linear-gradient(150deg, #faf8f2 0%, #f2eee5 100%);
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
   transition: opacity 320ms ease, transform 320ms ease;
   padding-top: env(safe-area-inset-top, 16px);
   padding-bottom: env(safe-area-inset-bottom, 16px);
   z-index: 9999;
   overflow: hidden;
+}
+
+.splash::before,
+.splash::after {
+  content: '';
+  position: absolute;
+  border-radius: 999px;
+  pointer-events: none;
+}
+
+.splash::before {
+  width: clamp(220px, 36vw, 420px);
+  height: clamp(220px, 36vw, 420px);
+  background: radial-gradient(circle, rgba(0, 0, 0, 0.08) 0%, rgba(0, 0, 0, 0) 70%);
+  filter: blur(16px);
+  z-index: 4;
+}
+
+.splash::after {
+  width: clamp(520px, 74vw, 900px);
+  height: clamp(520px, 74vw, 900px);
+  border: 1px solid rgba(26, 45, 36, 0.06);
+  z-index: 2;
 }
 
 /* hide smoothly when finishing */
@@ -36,9 +79,12 @@
   width: clamp(160px, 36vw, 320px);
   height: clamp(160px, 36vw, 320px);
   border-radius: 9999px;
-  border: 2px solid rgba(34, 197, 94, 0.12);
-  filter: blur(6px);
-  animation: ring-expand 1.8s cubic-bezier(.2,.9,.3,1) forwards;
+  border: 1px solid transparent;
+  background: conic-gradient(from 90deg, #eb5e28, #ffd200, #32c27d, #1598d8, #eb5e28);
+  -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 2px), #000 calc(100% - 1px));
+  mask: radial-gradient(farthest-side, transparent calc(100% - 2px), #000 calc(100% - 1px));
+  filter: blur(3px);
+  animation: ring-expand 1.8s cubic-bezier(.2,.9,.3,1) forwards, ring-rotate 5.5s linear infinite;
   z-index: 5;
 }
 
@@ -46,6 +92,9 @@
 .splash-logo {
   width: clamp(120px, 30vw, 300px); /* mínimo 120px, máximo 300px */
   height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 999px;
   z-index: 10;
   display: block;
   will-change: transform, opacity;
@@ -56,22 +105,27 @@
 /* class added after mount to trigger animation */
 .splash-logo.splash-logo--enter {
   animation: splash-enter 1.6s cubic-bezier(.2,.9,.3,1) forwards;
-  filter: drop-shadow(0 10px 25px rgba(0,0,0,0.16));
+  filter: drop-shadow(0 18px 28px rgba(14, 22, 18, 0.2));
 }
 
 /* pop + subtle rotation + settle */
 @keyframes splash-enter {
-  0%   { transform: scale(0.45) rotate(-26deg); opacity: 0; }
-  30%  { transform: scale(1.18) rotate(12deg); opacity: 1; }
-  65%  { transform: scale(0.97) rotate(-6deg); }
-  100% { transform: scale(1) rotate(0deg); opacity: 1; }
+  0%   { transform: scale(0.64) translateY(14px); opacity: 0; }
+  42%  { transform: scale(1.03) translateY(0); opacity: 1; }
+  72%  { transform: scale(0.99) translateY(0); }
+  100% { transform: scale(1) translateY(0); opacity: 1; }
 }
 
 /* expanding ring effect */
 @keyframes ring-expand {
-  0%   { transform: translate(-50%, -50%) scale(0.3); opacity: 0.25; }
-  50%  { transform: translate(-50%, -50%) scale(1.05); opacity: 0.14; }
-  100% { transform: translate(-50%, -50%) scale(1.25); opacity: 0; }
+  0%   { transform: translate(-50%, -50%) scale(0.72); opacity: 0.36; }
+  52%  { transform: translate(-50%, -50%) scale(1.02); opacity: 0.18; }
+  100% { transform: translate(-50%, -50%) scale(1.16); opacity: 0; }
+}
+
+@keyframes ring-rotate {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to { transform: translate(-50%, -50%) rotate(360deg); }
 }
 
 /* accessibility: respect reduced motion */
@@ -103,7 +157,7 @@
 
 /* fallback for very old browsers without gradients */
 @supports not (background: linear-gradient(0deg, #fff, #fff)) {
-  .splash { background-color: #fffaf0; }
+  .splash { background-color: #f5f2e9; }
 }
 
 /* SEO Landing Pages Styles */
